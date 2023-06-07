@@ -1,0 +1,35 @@
+.product-container-main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container{
+    width: 40rem;
+    height: 40rem;
+    border: 1px solid white;
+    object-fit: cover;
+}
+
+.image-container img{
+    width: 40rem;
+}
+
+.product-details-container{
+    font-size: xx-large;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.product-details-container button{
+    background-color: rgb(220, 196, 11) ;
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 1rem;
+}

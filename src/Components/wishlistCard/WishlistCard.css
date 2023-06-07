@@ -1,0 +1,36 @@
+.product-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 25rem;
+    width: 15.6rem;
+    box-shadow: 2px 3px 5px 3px rgba(158, 156, 156, 0.2);
+    border-radius: 5px;
+    margin: 3px;
+    position: relative;
+    
+}
+
+.product-container img{
+    width: 15.6rem;
+    height: 20rem;
+}
+
+.wishlist-btn{
+    position: absolute;
+    padding: 5px;
+    border-radius: 50%;
+    top: 1rem;
+    right: 1rem;
+}
+
+.addtocart-btn{
+    width: 15.6rem;
+    padding: 10px;
+    border: none;
+    background-color: #E5AE12;
+    
+}
+
+

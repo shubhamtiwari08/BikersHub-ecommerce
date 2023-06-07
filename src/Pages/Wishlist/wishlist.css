@@ -1,0 +1,10 @@
+.wishlist-body{
+    margin: 1rem 10rem;
+}
+
+
+.wishlist-box{
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+}

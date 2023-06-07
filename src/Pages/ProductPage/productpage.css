@@ -1,0 +1,17 @@
+.product-page{
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr 4fr;
+}
+
+.products-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    gap: 1rem;                      
+    padding: 1rem;
+    overflow-y: scroll;
+    
+}
+
+
