@@ -1,0 +1,38 @@
+.filter-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 20px ;
+    height: 75vh;
+}
+
+.filter-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.filter-heading button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    color: yellow;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+.category-container,.rating-container,.sort-container{
+    display: flex;
+    flex-direction:column ;
+    gap: 10px;
+
+}
+
+.price-range{
+    display: flex;
+    width: 130px;
+    justify-content: space-between;
+}

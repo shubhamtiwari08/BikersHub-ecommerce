@@ -1,0 +1,23 @@
+.address-container{
+    width: 20rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.address-box{
+    height: 10rem;
+}
+
+.address-container button{
+    background-color: rgb(255, 212, 19);
+    color: black;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.address-container input{
+    padding: 0.5rem;
+    margin-right: 5px;
+}

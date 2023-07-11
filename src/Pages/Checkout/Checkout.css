@@ -1,0 +1,33 @@
+.order-main-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-main-container h2{
+   position: absolute;
+   top: 17rem;
+}
+
+.order-summary{
+    width: 20rem;
+    height: 30rem;
+    border: 1px solid rgb(247, 195, 22);
+    border-radius: 5px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.address-container{
+    width: 20rem;
+    height: 30rem;
+    border-radius: 5px;
+    border: 1px solid rgb(247, 195, 22);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+

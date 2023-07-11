@@ -1,0 +1,52 @@
+
+.landing-main-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem;
+}
+
+.categories-container{
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85vh;
+     
+}
+
+.categories-title{
+    position: sticky;
+    top: 0;
+}
+
+.hero-img{
+    position: relative;
+}
+
+.title-container{
+    position: relative;
+}
+
+.hero-title{
+    position: absolute;
+    top: 2rem;
+    z-index: 999;
+ 
+}
+
+.Shop-now{
+    position: absolute;
+    left: 2rem;
+    bottom: 9rem;
+    padding: 1.5rem;
+    border-radius:5px;
+    font-size: large;
+    background-color: rgb(243, 214, 27);
+    color: black;
+    cursor: pointer;
+}
+ 
+ 
+ 
