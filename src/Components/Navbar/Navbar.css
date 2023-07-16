@@ -7,24 +7,32 @@
     width: 100vw;
     height: 50px;
     color: #665527;
-    box-shadow: -5px 0px 10px 3px #66552720;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     position: relative;
 }
-.nav-bar h3{
-    background-color: #E5AE12;
-    padding: 5px;
-    border-radius: 5px;
+
+.nav-bar h3 a{
+    color: var(--primary-color);
+    background-color: var(--Contrast-color);
+    padding: 1rem;
+    text-decoration: none;
+    text-shadow: 1px -1px 2px var(--Accent-color);
+    font-size: large;
     cursor: pointer;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+
+
  
 
 .nav-bar input{
     height: 30px;
     width: 400px;
     padding: 5px;
-    border: 1px solid rgba(180, 180, 180, 0.386);
     border-radius: 10px;
-    
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border: none;
 }
 
 /**count-component**/
@@ -56,9 +64,8 @@
     justify-content: space-between;
     align-items: center;
     width: 150px;
-    color: #E5AE12;
+    color: var(--Contrast-color);
     cursor: pointer;
-   
 }
 
  
@@ -66,10 +73,11 @@
 /**login-btn**/
 .btn-login{
     padding: 7px 12px;
-    background-color: #E5AE12;
-    color: white;
+    background-color: var(--Contrast-color);
+    color:var(--primary-color);
     font-weight: bold;
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }

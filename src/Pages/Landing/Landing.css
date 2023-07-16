@@ -1,4 +1,3 @@
-
 .landing-main-container{
     display: flex;
     justify-content: space-between;
@@ -43,7 +42,7 @@
     padding: 1.5rem;
     border-radius:5px;
     font-size: large;
-    background-color: rgb(243, 214, 27);
+    background-color: var(--secondary-color);
     color: black;
     cursor: pointer;
 }

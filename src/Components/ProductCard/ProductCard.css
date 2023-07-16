@@ -7,37 +7,73 @@
     border-radius: 5px;
     margin: 3px;
     position: relative;
-    border-radius: 5px;
+    padding: 1rem;
+    overflow: hidden;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
-.product-container img{
-    width: 15.6rem;
-    height: 20rem;
+.product-image{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 14rem;
+height: 20rem;
+border-radius: 5px;
+overflow: hidden;
+}
+
+.product-image img{
+    width: 12rem;
     border-radius:5px ;
-    opacity: 90%;
 }
-
 .product-name{
-    color: #E5AE12;
     width: 15rem;
 }
+
+.product-content{
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.product-content h4{
+    color: var(--primary-color);
+}
+
+.rating{
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating p{
+    background-color:var(--Contrast-color);
+    width: fit-content;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px ;
+}
+
 
 .wishlist-btn{
     position: absolute;
     padding: 5px;
+    border: none;
     border-radius: 50%;
     top: 1rem;
     right: 1rem;
 }
 
 .addtocart-btn{
-    width: 15.6rem;
+    width: 14rem;
     padding: 10px;
     border: none;
-    background-color: #E5AE12;
     border-radius: 5px;
-    color: black;
+    color: var(--primary-color);
+    background-color: var(--Neutral-color);
+    cursor: pointer;
     font-weight: bolder;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    margin-top: 0.5rem;
 }
 
 .goCart{

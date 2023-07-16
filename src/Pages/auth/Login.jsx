@@ -85,6 +85,7 @@ const handleGuest= ()=>{
   return (
     <div className='login-form-maincontainer'>
     <div className='login-form'>
+    <h1>Login</h1>
    <form onSubmit={handleSubmit}> 
      <input
           type="email"
@@ -103,8 +104,8 @@ const handleGuest= ()=>{
           
         />
        
-        <button type='submit' >Login</button>
-        <button  onClick={handleGuest} >Login as guest</button>
+        <button className="button" type='submit' >Login</button>
+        <button className="button" onClick={handleGuest} >Login as guest</button>
         <p>New user? <Link to={"/signup"}>Signup</Link></p>
       </form>
     </div>

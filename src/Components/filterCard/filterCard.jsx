@@ -47,6 +47,7 @@ function FilterCard() {
         min="1000"
         max="5000"
         step="2000"
+        className="slider"
         value={price} 
         onChange={(e)=>filterDispatch({type:"PRICE_FILTER",payload:e.target.value})}
         />

@@ -61,8 +61,8 @@ function Signup() {
 
   return (
   <div className="signup-body">
-      <h1 >Sign Up</h1>
     <div className='signup-card'>
+    <h1 >Sign Up</h1>
     <form onSubmit={handleSignup}>
     <input
           type="text"
@@ -92,9 +92,9 @@ function Signup() {
           value={signupData.password}
           onChange={handleInput}
         />
-        <button type='submit'  >Signup</button>
-        <p>Already have an account? <Link style={{color:"yellow"}} to={'/login'} >Login</Link></p>
+        <button type='submit' className="button"  >Signup</button>
       </form>
+      <p>Already have an account? <Link to={'/login'} >Login</Link></p>
     </div>
     </div>
   )
