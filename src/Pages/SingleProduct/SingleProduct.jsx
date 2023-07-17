@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router'
 import { ProductContext } from '../../Contexts/Category/ProductContext'
 import './singleProduct.css'
 import { cartContext } from '../../Contexts/Cart/CartContext'
+import { wishlistContext } from '../../Contexts/Wishlist/Wishlist'
 
 
 
@@ -10,8 +11,10 @@ function SingleProduct() {
 
 const [toggle,setToggle] = useState(false)
 const {singleProductId} = useParams()
+
 const {products} = useContext(ProductContext)
-const {addToCart} = useContext(cartContext)
+const {removeFromWishlist,addToWishlist,wishlistState} = useContext(wishlistContext)
+const {addToCart,cartState} = useContext(cartContext)
 const Navigate = useNavigate()
 
 
@@ -33,15 +36,20 @@ const handleAddtoCart = ()=>{
 
   return (
     <div className='product-container-main'>
+      <div className="content-container">
        <div className="image-container">
           <img src={imageUrl} alt={title} />
        </div>
        <div className="product-details-container">
-         <p>{title}</p>
+         <h3>{title}</h3>
           <p>{name}</p>
-          <p>Rs.{price}</p>
-          <p style={{color:"yellow"}}>Discount : {discount*100}%</p>
-          {toggle?<button onClick={()=>handleGoToCart()}>go to cart</button>:<button onClick={()=>handleAddtoCart()}>add to cart</button>}
+          <p>Rs.{price} <span style={{color:"grey", textDecoration:"line-through"}}>({Number(price)+Number(price*discount)})</span></p>
+          <span className="discount">Discount : {discount*100}%</span>
+          <div className="singleProduct-btns">
+          {wishlistState.wishlist.find(item=> singleProduct._id === item._id)?<button className="addtocart-btn button" style={{backgroundColor:"var(--primary-color)",color:"var(--Neutral-color)"}}  onClick={()=>removeFromWishlist(singleProduct)}>remove from wishlist</button>:<button className="addtocart-btn button" onClick={()=>addToWishlist(singleProduct)}>add to wishlist</button>}
+          {cartState.cart.find(item => item._id === singleProduct._id)?<button className="addtocart-btn button" style={{backgroundColor:"var(--primary-color)",color:"var(--Neutral-color)"}}  onClick={()=>handleGoToCart()}>go to cart</button>:<button className="addtocart-btn button" onClick={()=>handleAddtoCart()}>add to cart</button>}
+          </div>
+       </div>
        </div>
     </div>
   )

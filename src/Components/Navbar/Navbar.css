@@ -37,7 +37,7 @@
 
 /**count-component**/
 .count-num{
-    padding: 2px 5px;
+    padding: 1px 4px;
     border-radius: 50%;
     background-color: red;
     color: white;
@@ -51,7 +51,7 @@
 
 .cart-count{
     position: absolute;
-    right: -47px;
+    right: -48px;
     top: 0;
 
 }

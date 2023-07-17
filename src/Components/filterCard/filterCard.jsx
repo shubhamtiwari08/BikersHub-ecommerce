@@ -53,7 +53,7 @@ function FilterCard() {
         />
       </div>
       <div className="category-container">
-        <h3>category</h3>
+        <h3>Category</h3>
         {categoryData.map(({categoryName})=>{
           return (<label htmlFor={`${categoryName}`}> 
           <input type="checkbox" name='categories' value={categoryName} checked={categoryId === categoryName} onClick={(e)=>updateCategory(e.target.value)}  />{categoryName}
@@ -63,22 +63,22 @@ function FilterCard() {
       <div className="rating-container">
       <h3>Rating</h3>
         <label htmlFor="4stars">
-        <input type="checkbox" name='4stars'  onClick={()=> filterDispatch({type:"RATING_FILTER",payload:4})}/>4stars&above
+        <input type="checkbox" name='4stars'  onClick={()=> filterDispatch({type:"RATING_FILTER",payload:4})}/>4 stars & above
         </label> <label htmlFor="3stars">
-        <input type="checkbox" name='3stars' onClick={()=> filterDispatch({type:"RATING_FILTER",payload:3})}/>3stars&above
+        <input type="checkbox" name='3stars' onClick={()=> filterDispatch({type:"RATING_FILTER",payload:3})}/>3 stars & above
         </label> <label htmlFor="2stars">
-        <input type="checkbox" name='2stars' onClick={()=> filterDispatch({type:"RATING_FILTER",payload:2})}/>2stars&above
+        <input type="checkbox" name='2stars' onClick={()=> filterDispatch({type:"RATING_FILTER",payload:2})}/>2 stars & above
         </label> <label htmlFor="1star">
-        <input type="checkbox" name='1star' onClick={()=> filterDispatch({type:"RATING_FILTER",payload:1})}/>1stars&above
+        <input type="checkbox" name='1star' onClick={()=> filterDispatch({type:"RATING_FILTER",payload:1})}/>1 stars & above
         </label>
       </div>
       <div className="sort-container">
       <h3>Sort By</h3>
        <label htmlFor="two">
-      <input type="radio" name='two' onClick={()=>filterDispatch({type:"SORT_FILTER",payload:"HIGH_TO_LOW"})}/>high to low
+      <input type="radio" name='two' onClick={()=>filterDispatch({type:"SORT_FILTER",payload:"HIGH_TO_LOW"})}/>High to Low
       </label>
      <label htmlFor="two">
-      <input type="radio" name='two' onClick={()=>filterDispatch({type:"SORT_FILTER",payload:"LOW_TO_HIGH"})}/>low to high
+      <input type="radio" name='two' onClick={()=>filterDispatch({type:"SORT_FILTER",payload:"LOW_TO_HIGH"})}/>Low to High
       </label>
       </div>
 
