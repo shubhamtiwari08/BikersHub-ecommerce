@@ -3,12 +3,12 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr ;
     height: 90vh;
-    
+        
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
   }
   
   /* Track */
@@ -19,16 +19,32 @@
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(255, 204, 0); 
+    background: var(--Neutral-color); 
     border-radius: 10px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #be9f00; 
+    background: var(--Contrast-color); 
   }
 
   .products-container{
     display: flex;
     justify-content: center;
+  }
+
+  .cart-empty{
+    color: var(--Contrast-color);
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    font-size: xx-large;
+  }
+
+  .cart-empty h1{
+    margin: 3rem;
+  }
+
+  .cart-empty img{
+    margin-top: 5rem;
+    width: 30rem;
   }

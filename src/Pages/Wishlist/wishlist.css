@@ -1,10 +1,26 @@
 .wishlist-body{
-    margin: 1rem 10rem;
+    display: flex;
+    width: 85vw;
+    margin: auto;
+    height: 80vh;
+    flex-direction: column;
 }
 
+.wishlist-body h1{
+    color: var(--Contrast-color);
+    text-shadow: 2px 2px 2px black;
+    margin-top: 5rem;
+}
 
 .wishlist-box{
     display: flex;
-    width: 100vw;
-    height: 80vh;
 }
+
+.wishlist-box h1{
+    color: var(--Contrast-color);
+}
+
+.empty-wishlist-img{
+    width: 27rem;
+}
+

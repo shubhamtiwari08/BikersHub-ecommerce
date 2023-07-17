@@ -1,14 +1,2 @@
-.product-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 25rem;
-    width: 15.6rem;
-    
-    border-radius: 5px;
-    margin: 3px;
-    position: relative;
-    
-}
+
     

@@ -25,7 +25,7 @@ function Cart() {
     </div>
      <CartDetails cartDetail={cartState}/>
     </div>:
-    <div><h1 style={{display:"flex",justifyContent:'center',alignItems:"center",color:"yellow" }}>YOUR CART IS EMPTY</h1><Loading/></div>}
+    <div className="cart-empty"><h1>YOUR CART IS EMPTY</h1><img src="https://cdn.dribbble.com/users/5107895/screenshots/14532312/media/a7e6c2e9333d0989e3a54c95dd8321d7.gif" alt="Empty-cart-img"/></div>}
     </div>
   )
 }

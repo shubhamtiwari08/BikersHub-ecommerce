@@ -27,7 +27,7 @@ function WishlistCard({product}) {
        <p>{name}</p>
        <button className='addtocart-btn' onClick={()=>moveToCart(product)}>Move to cart</button>
       
-      <button className='wishlist-btn' onClick={()=>removeFromWishlist(product)}><FontAwesomeIcon icon={faHeart} size='xl' style={{color:"green"}} /></button>
+      <button className='wishlist-btn' onClick={()=>removeFromWishlist(product)}><FontAwesomeIcon icon={faHeart} size='xl' style={{color:"red",cursor:"pointer"}} /></button>
     </div>
   )
 }

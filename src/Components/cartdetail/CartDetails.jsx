@@ -23,7 +23,7 @@ function CartDetails({cartDetail}) {
           <p>Total savings</p><p> {cartDiscount}</p>
        </div>
       
-       <button className='checkout-btn' onClick={handleCheckout} >Checkout</button>
+       <button className='addtocart-btn button' onClick={handleCheckout} >Checkout</button>
     </div>
     </div>
   )
