@@ -6,35 +6,42 @@
 }
 
 .category-img{
-    width: 200px;
-    height: 110px;
+    width: 8rem;
     border-radius: 5px ;
-    opacity: 80%;
 }
 
 .img-category-container{
     width: 200px;
+    overflow: hidden;
     height: 110px;
+    background-color: white;
     margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     border-radius: 5px ;
     box-shadow: 1px 1px 5px 2px rgba(83, 82, 82, 0.259);
     color: rgba(0, 0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .category-name{
     position: absolute;
-    top: 65px;
+    top: 0px;
     width: 200px;
-    padding:5px 15px; 
+    height: 110px;
+    font-size: xx-large;
+    padding:45px 15px; 
     text-align: center;
     background-color: transparent;
+    transition: 1s;
 }
 
 .img-category-container :hover {
-    background-color: #E5AE12;
-    color: #665527;
-    box-shadow: 1px 1px 5px 2px rgba(186, 181, 17, 0.602);
+    background-color: var(--Contrast-color);
+    color: var(--primary-color);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     cursor: pointer;
 }
 

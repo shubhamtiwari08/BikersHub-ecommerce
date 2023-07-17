@@ -11,8 +11,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 85vh;
-     
+    height: 85vh;     
+    background-color: var(--Contrast-color);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.categories-container h2{
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    padding: 0.3rem 0rem;
+    text-align: center;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .categories-title{
@@ -31,20 +42,47 @@
 .hero-title{
     position: absolute;
     top: 2rem;
-    z-index: 999;
- 
+    z-index: 999; 
+    border-radius: 5px;
+    padding: 0.4rem;
+    line-height: 2.3rem;
+    
 }
+
+.bike-part,.covered{
+    background-color: var(--Contrast-color);
+    border-radius: 5px;
+    padding: 0.2rem;
+    color: white;
+}
+
+.covered{
+    background-color: rgb(41, 188, 41);
+}
+
+.carousel-bikes{
+    height: 80rem;
+}
+
+.carousel .slider-wrapper{
+    height: 52rem;
+}
+
+
 
 .Shop-now{
     position: absolute;
-    left: 2rem;
-    bottom: 9rem;
+    left: 0.2rem;
+    top: 18rem;
     padding: 1.5rem;
     border-radius:5px;
-    font-size: large;
-    background-color: var(--secondary-color);
-    color: black;
+    font-size: x-large;
+    background-color: var(--Contrast-color);
+    border: none;
+    color: white;
+    font-weight: bolder;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
  
  
