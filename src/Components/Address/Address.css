@@ -37,3 +37,51 @@
     padding: 0.5rem;
     margin-right: 5px;
 }
+
+.address-form{
+    position: absolute;
+    z-index: 99;
+    top: 19rem;
+    background-color: white;
+    right: 43rem;
+    width: 30rem;
+    height: 20rem;
+    padding: 1rem;
+}
+
+.address-form input{
+    padding: 0.8rem;
+    margin: 0.2rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border: none;
+}
+
+.address-btns{
+    margin-top: 4rem;
+}
+
+.address-btns button{
+    margin: 0.3rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border: 1px solid lightgray;
+}
+
+.address-btns button:nth-child(1){
+    background-color: lightseagreen;
+    color: white;
+    font-weight: 700;
+}
+
+.address-btns button:nth-child(2){
+    background-color: red;
+    color: white;
+    font-weight: 700;
+}
+
+.address-btns button:nth-child(3){
+    background-color: var(--Neutral-color);
+    color: white;
+    font-weight: 700;
+}
