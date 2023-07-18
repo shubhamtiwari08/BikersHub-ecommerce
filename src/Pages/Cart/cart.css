@@ -2,8 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr ;
-    height: 90vh;
-        
+    height: 90vh;        
 }
 
 /* width */
@@ -31,6 +30,7 @@
   .products-container{
     display: flex;
     justify-content: center;
+    overflow-y: scroll;
   }
 
   .cart-empty{

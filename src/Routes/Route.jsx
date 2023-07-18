@@ -12,6 +12,7 @@ import SingleProduct from '../Pages/SingleProduct/SingleProduct'
 import RequireAuth from '../Components/RequireAuth/RequireAuth'
 import Loading from '../Components/Loading/Loading'
 import Checkout from '../Pages/Checkout/Checkout'
+import Profile from '../Pages/Profile/Profile'
 
 function Routing() {
 
@@ -31,6 +32,7 @@ function Routing() {
        <Route path="/mockman" element={<MockApi/>}/>
        <Route path='/loading' element={<Loading/>}/>
        <Route path='/orderSummary' element={<Checkout/>}/>
+       <Route path='/profile' element={<Profile/>}/>
       </Routes>
     </div>
   )

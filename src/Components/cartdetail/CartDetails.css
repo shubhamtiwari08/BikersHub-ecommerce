@@ -1,29 +1,29 @@
 .cart-details-main-box{
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;    
 }
-
 
 
 .cartDetails-box{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 30rem;
     height: 18rem;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 2rem 0rem;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .detail-box{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(5,1fr);
-    gap: 10px;
+    gap: 0.8rem;
     font-size: larger;
+    text-align: start;
 }
 
 

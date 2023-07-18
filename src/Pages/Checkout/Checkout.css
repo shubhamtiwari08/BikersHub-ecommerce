@@ -14,7 +14,7 @@
 .order-summary{
     width: 20rem;
     height: 30rem;
-    border: 1px solid rgb(247, 195, 22);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     border-radius: 5px ;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@
     width: 20rem;
     height: 30rem;
     border-radius: 5px;
-    border: 1px solid rgb(247, 195, 22);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

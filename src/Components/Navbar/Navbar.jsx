@@ -3,7 +3,7 @@ import './Navbar.css'
 import {Link, useNavigate} from 'react-router-dom'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
 import Count from './Count';
 import { authContext } from '../../Contexts/Auth/AuthContext';
 import { cartContext } from '../../Contexts/Cart/CartContext';
@@ -30,6 +30,7 @@ const Navigate = useNavigate()
        {wishlistState.wishlistCount >0 &&  <Count count={wishlistState.wishlistCount}/>}
         <FontAwesomeIcon icon={faCartShopping} color='var(--primary-color)' size='lg' onClick={()=>(Navigate('/cart'))}  />
        <div className='cart-count'> {cartState.cartCount>0 && <Count count={cartState.cartCount} />}</div>
+       <FontAwesomeIcon icon={faUser} size='xl' color='black' onClick={()=>Navigate("/profile")}  />
        </div>
     </div>
   )
