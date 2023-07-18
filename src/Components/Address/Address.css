@@ -10,6 +10,22 @@
     height: 10rem;
 }
 
+.address{
+    border-radius: 5px;
+    height: 4rem;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.delete-address-btn{
+    padding: 0.3rem;
+    border: none;
+    border: 1px solid red;
+    background-color: transparent;
+    color: red;
+    border-radius: 5px;
+}
+
 .address-container button{
     background-color: rgb(255, 212, 19);
     color: black;

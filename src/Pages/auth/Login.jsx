@@ -28,14 +28,9 @@ function Login() {
     setLoginData((prev)=> ({...prev,[name]:value}))
   }
 
-
-
   const handleLogin = async(loginData)=>{
 
 try {
-  
- 
-
   const response = await fetch("/api/auth/login",{
     method:"POST",
     headers: {

@@ -1,13 +1,17 @@
-import react from "react";
+import react, { useContext } from "react";
 import './Profile.css'
 import { useState } from "react";
 import Address from "../../Components/Address/Address";
+import { authContext } from "../../Contexts/Auth/AuthContext";
 
 function Profile(){
 
     const [profileToggle,setProfileToggle] = useState(false)
+    const {userData} = useContext(authContext)
 
+    const {firstName,lastName,email}= userData
 
+    console.log(userData)
 
     const handleToggle=()=>{
         setProfileToggle(!profileToggle)
@@ -21,34 +25,14 @@ function Profile(){
           {profileToggle?
             <div className="profile-content">
                 <p>Profile Details</p>
-                <p>Name:</p>
-                <p>Email:</p>
+                <p>Name:{firstName + " " + lastName}</p>
+                <p>Email:{email}</p>
             </div>
             :
             <div className="address-content">
                 <p>My Addresses</p>
                 <Address/>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum praesentium numquam officiis, unde fugit hic et perspiciatis blanditiis placeat vel?<br/> 
-                 <button>delete</button><button>EDIT</button>
-                </p>
-            <button>add new address</button>
             </div>}
-            {false&& <div>
-                    <form type="submit">
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <div className="address-btns">
-                            <button>save</button>
-                            <button>Cancel</button>
-                            <button>fill with Dummy details</button>
-                        </div>
-                    </form>
-                </div>}
            </div>
     </div>)
 }
