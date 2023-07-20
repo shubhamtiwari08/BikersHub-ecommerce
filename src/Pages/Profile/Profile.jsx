@@ -1,13 +1,15 @@
-import react, { useContext } from "react";
+import react, { useContext, useEffect } from "react";
 import './Profile.css'
 import { useState } from "react";
 import Address from "../../Components/Address/Address";
 import { authContext } from "../../Contexts/Auth/AuthContext";
+import { orderContext } from "../../Contexts/OrderContext/OrderContext";
 
 function Profile(){
 
     const [profileToggle,setProfileToggle] = useState(false)
     const {userData} = useContext(authContext)
+    const {getAddress}= useContext(orderContext)
 
     const {firstName,lastName,email}= userData
 
@@ -16,6 +18,8 @@ function Profile(){
     const handleToggle=()=>{
         setProfileToggle(!profileToggle)
     }
+
+    
 
     return (<div className="profile-main-container">
         <div className="profile-content-container">

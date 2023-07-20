@@ -56,7 +56,7 @@ function FilterCard() {
         <h3>Category</h3>
         {categoryData.map(({categoryName})=>{
           return (<label htmlFor={`${categoryName}`}> 
-          <input type="checkbox" name='categories' value={categoryName} checked={categoryId === categoryName} onClick={(e)=>updateCategory(e.target.value)}  />{categoryName}
+          <input type="checkbox" name='categories' value={categoryName}  onClick={(e)=>updateCategory(e.target.value)}  />{categoryName}
           </label>)
         })}
       </div>

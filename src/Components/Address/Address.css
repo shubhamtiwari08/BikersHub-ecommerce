@@ -56,8 +56,42 @@
     border: none;
 }
 
+.all-address-box{
+    overflow-y: auto;
+    height: 10rem;
+}
+
+.single-address-box{
+    display: flex;
+    width: 24rem;
+    height: 5rem;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 0.4rem;
+}
+
+.edit-btn{
+    color: green;
+    border:1px solid green;
+}
+
+.remove-btn{
+    color: red;
+    border:1px solid red;
+}
+
 .address-btns{
     margin-top: 4rem;
+}
+
+.btn{
+    background-color: transparent;
+    padding: 0.3rem;
+    border-radius: 5px ;
+    margin: 0.2rem;
+    width: 4rem;
+    cursor: pointer;
 }
 
 .address-btns button{
