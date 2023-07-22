@@ -98,6 +98,8 @@ function CartProvder({children}) {
             }
 
 
+    
+
     const increment = async(product) =>{
         try {
             const response = await fetch(`/api/user/cart/${product._id}`,{
@@ -154,7 +156,7 @@ function CartProvder({children}) {
 
 
   return (
-  <cartContext.Provider value={{cartState,addToCart,getCart,removeFromCart,increment,decrement}}>
+  <cartContext.Provider value={{cartState,cartDispatch,addToCart,getCart,removeFromCart,increment,decrement}}>
    {children}
   </cartContext.Provider>)
   

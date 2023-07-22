@@ -21,7 +21,7 @@ export const cartReducer = (state,{type,payload})=>{
                 cartDiscount:payload.reduce((acc,curr)=>(acc += Number(curr.discount)*Number(curr.price)*Number(curr.qty)),0)
             }
         case "CLEAR_CART":
-            return {
+        return {
         ...state,
         cart:[],
         cartCount:0,

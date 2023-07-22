@@ -20,7 +20,7 @@ function Cart() {
   return (
     <div>
     {finalCart.length  > 0 ?<div className='cart-main-container'>
-    <div className="products-container">
+    <div className="all-products-container">
     {finalCart.map(item=> <ProductCardhorizontal product={item}/>)}
     </div>
     <CartDetails cartDetail={cartState}/>

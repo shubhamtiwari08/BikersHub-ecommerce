@@ -12,13 +12,13 @@ function Address({values}) {
   const [edit,setEdit]=useState(false)
 
     const dummyDetail =  {
-      firstName :"pandu",
-      lastName :"sandu",
-      address:"xyz, ohio, aret d51",
-      streetAddress:"green street",
-      pincode:"9999888",
-      city:"Delli",
-      state:"Mental pradesh"
+      name :"pandu",
+      house :"sandu",
+      city:"xyz, ohio, aret d51",
+      state:"green street",
+      country:"9999888",
+      pincode:"Delli",
+      mobile:"Mental pradesh"
     } 
     const [inputAddress, setInputAddress]= useState( {
       name :"pandu",
@@ -30,8 +30,7 @@ function Address({values}) {
       mobile:"811238288"
     })
 
-    const {userData} = useContext(authContext)
-    const [address , setAddress] = useState( [{
+    const initialState = {
       name :"",
       house :"",
       city:"",
@@ -39,7 +38,13 @@ function Address({values}) {
       country:"",
       pincode:"",
       mobile:""
-    }])
+    }
+
+
+    const {userData} = useContext(authContext)
+    const [address , setAddress] = useState( [initialState])
+
+
 
     const handleInput=(e)=>{
        const name = e.target.name
@@ -54,11 +59,12 @@ function Address({values}) {
        }
        addAddress(inputAddress)
        setInputToggle(!inputToggle)
+       setAddress(initialState)
     }
 
     const handleDummyAddress=(e)=>{
       e.preventDefault()
-      setAddress()
+      setAddress(dummyDetail)
     }
 
     const handleRemoveAddress=(id)=>{
@@ -86,7 +92,7 @@ function Address({values}) {
       <div className='all-address-box'>
       {orderAddress.map(item => 
         <div className='single-address-box'>
-        <input type='radio' value={`${item.name}, ${item.house}, ${item.city}, ${item.state},${item.country},${item.pincode}` }/>
+        <input type='radio' name='single-address' value={`${item.name}, ${item.house}, ${item.city}, ${item.state},${item.country},${item.pincode}` }/>
         {`${item.name}, ${item.house}, ${item.city}, ${item.state},${item.country},${item.pincode}`} 
         <div className='single-address-btns'>
         <button className='remove-btn btn' onClick={()=>handleRemoveAddress(item._id)}>remove</button>
@@ -114,5 +120,6 @@ function Address({values}) {
     </div>
   )
 }
+
 
 export default Address

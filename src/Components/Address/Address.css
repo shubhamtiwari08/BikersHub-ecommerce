@@ -1,5 +1,5 @@
 .address-container{
-    width: 20rem;
+    width: 24rem;
     height: 30rem;
     display: flex;
     flex-direction: column;
@@ -26,12 +26,7 @@
     border-radius: 5px;
 }
 
-.address-container button{
-    background-color: rgb(255, 212, 19);
-    color: black;
-    padding: 0.5rem;
-    border-radius: 5px;
-}
+
 
 .address-container input{
     padding: 0.5rem;
@@ -67,8 +62,9 @@
     height: 5rem;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     padding: 0.4rem;
+    margin: 0.3rem;
 }
 
 .edit-btn{

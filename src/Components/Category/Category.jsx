@@ -14,9 +14,7 @@ function Category({name,image,categoryName}) {
   const handleNavigation = ()=>{
       navigate(`/productpage/${categoryName}`)
       filterDispatch({type:"CATEGORY_FILTER",payload:categoryName})
-
   }
-
 
   return (
  
@@ -25,7 +23,6 @@ function Category({name,image,categoryName}) {
       <img src={image} className='category-img'/>
       <h3 className='category-name'>{categoryName}</h3>
       </div>
-
     </div>
     
   )

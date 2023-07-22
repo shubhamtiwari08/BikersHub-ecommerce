@@ -15,6 +15,9 @@ function FilterCard() {
 
   const {categories,price,rating,sort} = filterState
 
+  const enders = "Fenders"
+
+  console.log(filterState.categories[enders])
 
   console.log(categoryData)
 
@@ -24,10 +27,12 @@ function FilterCard() {
     filterDispatch({type:"CATEGORY_FILTER", payload:pageName}))
   }
 
+  console.log(filterState.categories)
+
   const clear = () =>{
     filterDispatch({type:'CLEAR'})
     Navigate('/productpage')
-  }
+}
 
 
   return (
@@ -56,7 +61,7 @@ function FilterCard() {
         <h3>Category</h3>
         {categoryData.map(({categoryName})=>{
           return (<label htmlFor={`${categoryName}`}> 
-          <input type="checkbox" name='categories' value={categoryName}  onClick={(e)=>updateCategory(e.target.value)}  />{categoryName}
+          <input type="checkbox" name='categories'  checked={filterState.categories[categoryName] } value={categoryName}  onClick={(e)=>updateCategory(e.target.value)}  />{categoryName}
           </label>)
         })}
       </div>

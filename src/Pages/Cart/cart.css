@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr ;
-    height: 90vh;        
+    height: 80vh;        
 }
 
 /* width */
@@ -27,10 +27,12 @@
     background: var(--Contrast-color); 
   }
 
-  .products-container{
+  .all-products-container{
     display: flex;
-    justify-content: center;
-    overflow-y: scroll;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
   }
 
   .cart-empty{
