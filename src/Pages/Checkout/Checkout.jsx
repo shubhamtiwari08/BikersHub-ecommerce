@@ -29,7 +29,7 @@ function Checkout() {
     
 
     const handlePlaceOrder = ()=>{
-          if(delieveryAddress===""){
+          if(delieveryAddress==="" ){
             toast.warn("Select an address to proceed", {
         position: "top-center",
         autoClose: 2000,
@@ -40,6 +40,17 @@ function Checkout() {
         progress: undefined,
         theme: "light",
       });
+          }else if(finalCart.length>0){
+            toast.warn("cart is empty", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      })
           }
           else{
             displayRazorpay()

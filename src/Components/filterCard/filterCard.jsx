@@ -67,14 +67,14 @@ function FilterCard() {
       </div>
       <div className="rating-container">
       <h3>Rating</h3>
-        <label htmlFor="4stars">
-        <input type="checkbox" name='4stars'  onClick={()=> filterDispatch({type:"RATING_FILTER",payload:4})}/>4 stars & above
-        </label> <label htmlFor="3stars">
-        <input type="checkbox" name='3stars' onClick={()=> filterDispatch({type:"RATING_FILTER",payload:3})}/>3 stars & above
-        </label> <label htmlFor="2stars">
-        <input type="checkbox" name='2stars' onClick={()=> filterDispatch({type:"RATING_FILTER",payload:2})}/>2 stars & above
-        </label> <label htmlFor="1star">
-        <input type="checkbox" name='1star' onClick={()=> filterDispatch({type:"RATING_FILTER",payload:1})}/>1 stars & above
+        <label htmlFor="rating">
+        <input type="radio" name='rating'  onClick={()=> filterDispatch({type:"RATING_FILTER",payload:4})}/>4 stars & above
+        </label> <label htmlFor="rating">
+        <input type="radio" name='rating' onClick={()=> filterDispatch({type:"RATING_FILTER",payload:3})}/>3 stars & above
+        </label> <label htmlFor="rating">
+        <input type="radio" name='rating' onClick={()=> filterDispatch({type:"RATING_FILTER",payload:2})}/>2 stars & above
+        </label> <label htmlFor="rating">
+        <input type="radio" name='rating' onClick={()=> filterDispatch({type:"RATING_FILTER",payload:1})}/>1 stars & above
         </label>
       </div>
       <div className="sort-container">

@@ -7,7 +7,7 @@ import { orderContext } from "../../Contexts/OrderContext/OrderContext";
 
 function Profile(){
 
-    const [profileToggle,setProfileToggle] = useState(false)
+    const [profileToggle,setProfileToggle] = useState(true)
     const {userData} = useContext(authContext)
     const {getAddress}= useContext(orderContext)
 
@@ -15,16 +15,14 @@ function Profile(){
 
     console.log(userData)
 
-    const handleToggle=()=>{
-        setProfileToggle(!profileToggle)
-    }
+
 
     
 
     return (<div className="profile-main-container">
         <div className="profile-content-container">
             <div className="profile-btns">
-                <button onClick={handleToggle}>Profile</button><button onClick={handleToggle}>Address</button>
+                <button style={{backgroundColor:profileToggle?"var(--Neutral-color)":""}} onClick={()=>setProfileToggle(true)} className={profileToggle&&"active"}>Profile</button><button style={{backgroundColor:profileToggle?"":"var(--Neutral-color)"}} onClick={()=>setProfileToggle(false)}>Address</button>
             </div>
           {profileToggle?
             <div className="profile-content">

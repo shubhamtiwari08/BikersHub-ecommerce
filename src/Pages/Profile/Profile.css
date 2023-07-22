@@ -31,7 +31,7 @@
     background-color: var(--Neutral-color);
 }
 
-.profile-btns button:focus{
+.active{
     color: black;
     background-color: var(--Neutral-color);
 }

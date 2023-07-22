@@ -24,7 +24,6 @@ function ProductPage() {
  
   const CategoryFilteredData = getCategoryFilteredData(RatingFilteredData,categories)
 
- 
   const sortedData = getSortedData(CategoryFilteredData,sort)
  
   const searchData =  searchFilteredData(sortedData,word)

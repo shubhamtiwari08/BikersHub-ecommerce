@@ -90,7 +90,7 @@ function CartProvder({children}) {
                 console.log("working")
                 cartDispatch({type:"DELETE_FROM_CART", payload:cartData.cart})
             } 
-            Toast({type:"success",message:"deleted from cart"})
+            Toast({type:"error",message:"deleted from cart"})
         }
     }catch (error) {
         Toast({type:"error",message:error})

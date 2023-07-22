@@ -12,22 +12,22 @@ function Address({values}) {
   const [edit,setEdit]=useState(false)
 
     const dummyDetail =  {
-      name :"pandu",
-      house :"sandu",
-      city:"xyz, ohio, aret d51",
-      state:"green street",
-      country:"9999888",
-      pincode:"Delli",
-      mobile:"Mental pradesh"
-    } 
-    const [inputAddress, setInputAddress]= useState( {
-      name :"pandu",
-      house :"sandu",
-      city:"xyz, ohio, aret d51",
+      name :"adarsh balak",
+      house :"house no.40",
+      city:"New delhi",
       state:"green street",
       country:"India",
       pincode:"9999888",
       mobile:"811238288"
+    } 
+    const [inputAddress, setInputAddress]= useState( {
+      name :"",
+      house :"",
+      city:"",
+      state:"",
+      country:"",
+      pincode:"",
+      mobile:""
     })
 
     const initialState = {
@@ -52,19 +52,22 @@ function Address({values}) {
       setInputAddress({...inputAddress,[name]:value})
     }
     
-    const handleSubmit = (e)=>{
+    const handleSubmit = (e,id,inputAddress)=>{
        e.preventDefault(e)
        if(edit){
-
-       }
+          editAddress(id,inputAddress)  
+          setInputToggle(!inputToggle)
+          return
+       }else{
        addAddress(inputAddress)
        setInputToggle(!inputToggle)
        setAddress(initialState)
+      }
     }
 
     const handleDummyAddress=(e)=>{
       e.preventDefault()
-      setAddress(dummyDetail)
+      setInputAddress(dummyDetail)
     }
 
     const handleRemoveAddress=(id)=>{
@@ -73,7 +76,7 @@ function Address({values}) {
 
     const handleEditAddress=(item)=>{
        setEdit(!edit)
-       setAddress(item)
+       setInputAddress(item)
        setInputToggle(!inputToggle)
     }
 
@@ -90,7 +93,7 @@ function Address({values}) {
     <div className='address-contanier' >
     <div className="address-box">
       <div className='all-address-box'>
-      {orderAddress.map(item => 
+      {orderAddress?.map(item => 
         <div className='single-address-box'>
         <input type='radio' name='single-address' value={`${item.name}, ${item.house}, ${item.city}, ${item.state},${item.country},${item.pincode}` }/>
         {`${item.name}, ${item.house}, ${item.city}, ${item.state},${item.country},${item.pincode}`} 
@@ -103,15 +106,15 @@ function Address({values}) {
     </div>
       {inputToggle?<div className='address-form'>
         <form type="submit">
-                <input type="text" onChange={handleInput} value={address?.name} name='name' placeholder='name'/>
-                <input type="text" onChange={handleInput} value={address?.house} name='house' placeholder='house'/>
-                <input type="text" onChange={handleInput} value={address?.city} name='city' placeholder='city'/>
-                <input type="text" onChange={handleInput} value={address?.state} name='state' placeholder='state'/>
-                <input type="text" onChange={handleInput} value={address?.country} name='country' placeholder='country'/>
-                <input type="text" onChange={handleInput} value={address?.pincode} name='pincode' placeholder='pincode'/>
-                <input type="text" onChange={handleInput} value={address?.mobile} name='mobile' placeholder='mobile'/>
+                <input type="text" onChange={handleInput} value={inputAddress?.name} name='name' placeholder='name'/>
+                <input type="text" onChange={handleInput} value={inputAddress?.house} name='house' placeholder='house'/>
+                <input type="text" onChange={handleInput} value={inputAddress?.city} name='city' placeholder='city'/>
+                <input type="text" onChange={handleInput} value={inputAddress?.state} name='state' placeholder='state'/>
+                <input type="text" onChange={handleInput} value={inputAddress?.country} name='country' placeholder='country'/>
+                <input type="text" onChange={handleInput} value={inputAddress?.pincode} name='pincode' placeholder='pincode'/>
+                <input type="text" onChange={handleInput} value={inputAddress?.mobile} name='mobile' placeholder='mobile'/>
                 <div className="address-btns">
-                    <button onClick={handleSubmit}>{edit?"update":"save"}</button>
+                    <button onClick={(e)=>handleSubmit(e,inputAddress._id,inputAddress)}>{edit?"update":"save"}</button>
                     <button onClick={()=>setInputToggle(!inputToggle)}>Cancel</button>
                     <button onClick={handleDummyAddress}>fill with Dummy details</button>
                 </div>

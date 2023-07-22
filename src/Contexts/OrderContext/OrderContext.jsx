@@ -72,10 +72,11 @@ function OrderProvider({children}) {
                 headers:{
                     authorization:Token
                 },
-                body:JSON.stringify(updatedAddress)
+                body:JSON.stringify({address:updatedAddress})
             })
-            const data = response.json()
-            console.log(data)
+            const data = await response.json()
+            console.log(data, id)
+            orderDispatch({type:"ADD_ADDRESS",payload:data.address})
         } catch (error) {
             
         }
