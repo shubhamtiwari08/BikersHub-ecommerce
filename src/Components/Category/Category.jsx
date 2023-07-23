@@ -17,7 +17,7 @@ function Category({ name, image, categoryName }) {
     <div className="cartegory-container" onClick={handleNavigation}>
       <div className="img-category-container">
         <img src={image} className="category-img" />
-        <h3 className="category-name">{categoryName}</h3>
+        <h3 className="category-name">{categoryName.toUpperCase()}</h3>
       </div>
     </div>
   );

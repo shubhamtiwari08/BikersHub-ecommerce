@@ -12,9 +12,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 85vh;     
-    background-color: var(--Contrast-color);
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .categories-container h2{
@@ -73,7 +71,7 @@
 .Shop-now{
     position: absolute;
     left: 0.2rem;
-    top: 18rem;
+    top: 40rem;
     padding: 1.5rem;
     border-radius:5px;
     font-size: x-large;
