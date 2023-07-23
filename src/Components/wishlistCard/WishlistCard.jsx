@@ -21,7 +21,9 @@ function WishlistCard({product}) {
 
   return (
     <div className='product-container'>
-      <img src={imageUrl} onClick={()=> Navigate(`/productpage/${category}/${_id}`)}/>
+    <div className='product-image
+    '><img src={imageUrl} onClick={()=> Navigate(`/productpage/${category}/${_id}`)}/>
+    </div>
       <h4>{title}</h4>
       <h2>{price}</h2>
        <p>{name}</p>
