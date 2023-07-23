@@ -36,7 +36,7 @@ function Checkout() {
         progress: undefined,
         theme: "light",
       });
-    } else if (finalCart.length > 0) {
+    } else if (finalCart.length === 0) {
       toast.warn("cart is empty", {
         position: "top-center",
         autoClose: 2000,
