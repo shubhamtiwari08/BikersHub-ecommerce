@@ -12,9 +12,13 @@ import {
 } from "../../utils/ProductFilters";
 import { FilterContext } from "../../Contexts/FilterContext/FilterContext";
 import Loading from "../../Components/Loading/Loading";
+import { cartContext } from "../../Contexts/Cart/CartContext";
+import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
 
 function ProductPage() {
   const { products } = useContext(ProductContext);
+  const {getCart} = useContext(cartContext)
+  const {wishlistState,getWishlist}=useContext(wishlistContext)
 
   const {
     filterState: { price, sort, word, rating, categories },
@@ -34,6 +38,12 @@ function ProductPage() {
   const searchData = searchFilteredData(sortedData, word);
 
   const FinalProducts = searchData;
+
+  useEffect(() => {
+    getCart()
+    getWishlist()
+    console.log(wishlistState,"wishlist-check")
+  }, []);
 
   return (
     <div className="product-page">

@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router";
 import { ProductContext } from "../../Contexts/Category/ProductContext";
 import "./singleProduct.css";
 import { cartContext } from "../../Contexts/Cart/CartContext";
-import { wishlistContext } from "../../Contexts/Wishlist/Wishlist";
+import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
 
 function SingleProduct() {
   const [toggle, setToggle] = useState(false);

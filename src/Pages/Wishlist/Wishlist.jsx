@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./wishlist.css";
 
-import { wishlistContext } from "../../Contexts/Wishlist/Wishlist";
+import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
 import WishlistCard from "../../Components/wishlistCard/WishlistCard";
 import Loading from "../../Components/Loading/Loading";
 

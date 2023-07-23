@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import "./ProductCard.css";
 import { useNavigate } from "react-router";
 import { cartContext } from "../../Contexts/Cart/CartContext";
-import { wishlistContext } from "../../Contexts/Wishlist/Wishlist";
+import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
 import { authContext } from "../../Contexts/Auth/AuthContext";
 
 function ProductCard({ product }) {
@@ -16,8 +16,11 @@ function ProductCard({ product }) {
     useContext(wishlistContext);
   const { isLogged } = useContext(authContext);
   const Navigate = useNavigate();
-  const finalCart = cartState.cart;
-  const finalWishlist = wishlistState.wishlist;
+  const finalCart = cartState?.cart;
+  const finalWishlist = wishlistState?.wishlist;
+
+
+  console.log(wishlistState,finalWishlist)
 
   return (
     <div className="product-container">

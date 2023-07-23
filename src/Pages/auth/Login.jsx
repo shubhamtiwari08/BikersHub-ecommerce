@@ -41,9 +41,9 @@ function Login() {
         setLoginData(defaultData);
         Navigate("/productpage");
         setIsLogged(true);
-        Toast({ type: "success", message: "logged in" });
+        Toast({ type: "success", message: "Logged in successfully" });
       } else {
-        if (setIsLogged === false) {
+        if (loginData.email.length === 0||loginData.password.length === 0) {
           Toast({ type: "error", message: "wrong email or password" });
         }
       }
@@ -59,7 +59,7 @@ function Login() {
   };
 
   const handleGuest = () => {
-    handleLogin(guest);
+    setLoginData(guest)
   };
 
   //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWI5NWYyMC04ZDgzLTQ0MzktOGI3ZC1lNGEzOGRlMjUxODkiLCJlbWFpbCI6ImFkYXJzaGJhbGlrYUBnbWFpbC5jb20ifQ.xnaHqWs8YqgBptGtuky3F0xtHJDfz-J8_Wglpu2vYtY

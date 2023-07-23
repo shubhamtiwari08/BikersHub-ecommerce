@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import "./WishlistCard.css";
 import { useNavigate } from "react-router";
 import { cartContext } from "../../Contexts/Cart/CartContext";
-import { wishlistContext } from "../../Contexts/Wishlist/Wishlist";
+import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
 
 function WishlistCard({ product }) {
   const { title, price, imageUrl, name, _id, category } = product;

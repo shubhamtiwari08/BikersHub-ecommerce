@@ -6,6 +6,7 @@ import { FilterContext } from "../../Contexts/FilterContext/FilterContext";
 import { useNavigate } from "react-router";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { cartContext } from "../../Contexts/Cart/CartContext";
 
 function Landing() {
   const images = [
@@ -18,6 +19,7 @@ function Landing() {
 
   const { categoryData, categoriesHandle } = useContext(useCategory);
   const { filterDispatch } = useContext(FilterContext);
+  const {getCart} = useContext(cartContext)
 
   console.log(categoryData);
 
@@ -28,6 +30,7 @@ function Landing() {
   useEffect(() => {
     categoriesHandle();
     filterDispatch({ type: "CLEAR" });
+    getCart()
   }, []);
 
   return (

@@ -1,5 +1,4 @@
-import React, { createContext, useContext, useEffect, useReducer } from "react";
-import { AuthContext } from "../Auth/AuthContext";
+import React, { createContext, useEffect, useReducer } from "react";
 import { wishlistReducer } from "../../Reducers/WishlistReducer";
 import Toast from "../../Components/Toast/Toast";
 
@@ -7,6 +6,7 @@ export const wishlistContext = createContext();
 
 function WishlistProvider({ children }) {
   const initialWishlistState = { wishlist: [], wishlistCount: 0 };
+
   const [wishlistState, wishlistDispatch] = useReducer(
     wishlistReducer,
     initialWishlistState
@@ -17,17 +17,13 @@ function WishlistProvider({ children }) {
   const getWishlist = async () => {
     try {
       const response = await fetch("/api/user/wishlist", {
-        method: "GET",
         headers: {
           authorization: Token,
         },
       });
-      const wishlistData = response.json();
-      if (response.status === 200) {
-        wishlistDispatch({
-          type: "GET_WISHLIST",
-          payload: wishlistData.wishlist,
-        });
+      const wishlistData = await response.json();
+      if (response.status === 200 || 201) {
+        console.log(wishlistData)
       }
     } catch (error) {
       console.error(error);
@@ -49,7 +45,7 @@ function WishlistProvider({ children }) {
       });
       const wishlistData = await response.json();
 
-      if (response.status === 201) {
+      if (response.status === 201 || 200) {
         wishlistDispatch({
           type: "ADD_TO_WISHLIST",
           payload: wishlistData.wishlist,
@@ -87,7 +83,13 @@ function WishlistProvider({ children }) {
 
   return (
     <wishlistContext.Provider
-      value={{ removeFromWishlist, addToWishlist, wishlistState, getWishlist }}
+      value={{
+        wishlistDispatch,
+        removeFromWishlist,
+        addToWishlist,
+        wishlistState,
+        getWishlist,
+      }}
     >
       {children}
     </wishlistContext.Provider>

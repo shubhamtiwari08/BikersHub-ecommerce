@@ -11,14 +11,22 @@ import {
 import Count from "./Count";
 import { authContext } from "../../Contexts/Auth/AuthContext";
 import { cartContext } from "../../Contexts/Cart/CartContext";
-import { wishlistContext } from "../../Contexts/Wishlist/Wishlist";
+import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
 import { FilterContext } from "../../Contexts/FilterContext/FilterContext";
 
 function Navbar() {
   const { isLogged, logoutHandler } = useContext(authContext);
-  const { cartState } = useContext(cartContext);
-  const { wishlistState } = useContext(wishlistContext);
+  const { cartState,cartDispatch } = useContext(cartContext);
+  const { wishlistState, wishlistDispatch } = useContext(wishlistContext);
   const { filterDispatch } = useContext(FilterContext);
+
+
+  const handleLogout =()=>{
+      logoutHandler()
+      wishlistDispatch({type:"CLEAR_WISHLIST"})
+      cartDispatch({type:"CLEAR_CART"})
+
+  }
 
   const Navigate = useNavigate();
   return (
@@ -39,7 +47,7 @@ function Navbar() {
       />
       <div className="Nav-btns">
         {isLogged ? (
-          <button className="btn-login" onClick={logoutHandler}>
+          <button className="btn-login" onClick={handleLogout}>
             Logout
           </button>
         ) : (

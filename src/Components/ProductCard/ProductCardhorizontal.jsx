@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./Productcardhorizontal.css";
 import { cartContext } from "../../Contexts/Cart/CartContext";
-import { wishlistContext } from "../../Contexts/Wishlist/Wishlist";
+import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
 
 function ProductCardhorizontal({ product }) {
   const {

@@ -31,15 +31,14 @@ function CartProvder({ children }) {
         });
         const data = await response.json();
         cartDispatch({ type: "GET_CART", payload: data.cart });
+        console.log(cartState)
       } catch (error) {
         console.error(error);
       }
     }
   };
 
-  useEffect(() => {
-    getCart();
-  }, []);
+
 
   const addToCart = async (product) => {
     try {
@@ -132,6 +131,10 @@ function CartProvder({ children }) {
       console.error(error);
     }
   };
+
+  useEffect(() => {
+    getCart();
+  }, []);
 
   return (
     <cartContext.Provider
