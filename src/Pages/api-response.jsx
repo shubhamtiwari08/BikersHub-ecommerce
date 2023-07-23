@@ -1,12 +1,12 @@
-import React from 'react'
-import Mockman from 'mockman-js'
+import React from "react";
+import Mockman from "mockman-js";
 
 function MockApi() {
   return (
     <div>
-      <Mockman/>
+      <Mockman />
     </div>
-  )
+  );
 }
 
-export default MockApi
+export default MockApi;

@@ -1,5 +1,8 @@
 import { Server, Model, RestSerializer } from "miragejs";
-import { loginHandler, signupHandler } from "./backend/controllers/AuthController";
+import {
+  loginHandler,
+  signupHandler,
+} from "./backend/controllers/AuthController";
 import {
   addItemToCartHandler,
   getCartItemsHandler,
@@ -10,7 +13,10 @@ import {
   getAllCategoriesHandler,
   getCategoryHandler,
 } from "./backend/controllers/CategoryController";
-import { getAllProductsHandler, getProductHandler } from "./backend/controllers/ProductController";
+import {
+  getAllProductsHandler,
+  getProductHandler,
+} from "./backend/controllers/ProductController";
 import {
   addItemToWishlistHandler,
   getWishlistItemsHandler,
@@ -64,8 +70,7 @@ export function makeServer({ environment = "development" } = {}) {
               state: "Haryana",
               country: "India",
               pincode: 101001,
-              mobile: 1234567890
-
+              mobile: 1234567890,
             },
           ],
         })
@@ -92,12 +97,18 @@ export function makeServer({ environment = "development" } = {}) {
       this.get("/user/cart", getCartItemsHandler.bind(this));
       this.post("/user/cart", addItemToCartHandler.bind(this));
       this.post("/user/cart/:productId", updateCartItemHandler.bind(this));
-      this.delete("/user/cart/:productId", removeItemFromCartHandler.bind(this));
+      this.delete(
+        "/user/cart/:productId",
+        removeItemFromCartHandler.bind(this)
+      );
 
       // wishlist routes (private)
       this.get("/user/wishlist", getWishlistItemsHandler.bind(this));
       this.post("/user/wishlist", addItemToWishlistHandler.bind(this));
-      this.delete("/user/wishlist/:productId", removeItemFromWishlistHandler.bind(this));
+      this.delete(
+        "/user/wishlist/:productId",
+        removeItemFromWishlistHandler.bind(this)
+      );
 
       // address routes (private)
       this.get("/user/address", getAddressHandler.bind(this));

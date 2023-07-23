@@ -1,36 +1,32 @@
-import React, { useContext, useEffect, useState } from 'react'
-import Address from '../../Components/Address/Address'
-import { cartContext } from '../../Contexts/Cart/CartContext'
-import './Checkout.css'
-import Toast from '../../Components/Toast/Toast'
-import { useNavigate } from 'react-router'
-import { orderContext } from '../../Contexts/OrderContext/OrderContext'
-import CartDetails from '../../Components/cartdetail/CartDetails'
-import { toast } from 'react-toastify'
-import { FilterContext } from '../../Contexts/FilterContext/FilterContext'
-import { authContext } from '../../Contexts/Auth/AuthContext'
-
-
+import React, { useContext, useEffect, useState } from "react";
+import Address from "../../Components/Address/Address";
+import { cartContext } from "../../Contexts/Cart/CartContext";
+import "./Checkout.css";
+import Toast from "../../Components/Toast/Toast";
+import { useNavigate } from "react-router";
+import { orderContext } from "../../Contexts/OrderContext/OrderContext";
+import CartDetails from "../../Components/cartdetail/CartDetails";
+import { toast } from "react-toastify";
+import { FilterContext } from "../../Contexts/FilterContext/FilterContext";
+import { authContext } from "../../Contexts/Auth/AuthContext";
 
 function Checkout() {
-    const{cartState,cartDispatch} = useContext(cartContext)
-    const {filterDispatch} = useContext(FilterContext)
-    const {userData} = useContext(authContext)
-    const finalCart = cartState.cart
-    const Navigate = useNavigate()
-  
-    const {cartSum,cartDiscount,cartCount}= cartState
-    const [delieveryAddress,setDeliveryAddress] = useState("")
-    
-    const {getAddress,orderState} = useContext(orderContext)
-    const {orderAddress} = orderState
-    const {firstName,lastName,email}= userData
-    
-    
+  const { cartState, cartDispatch } = useContext(cartContext);
+  const { filterDispatch } = useContext(FilterContext);
+  const { userData } = useContext(authContext);
+  const finalCart = cartState.cart;
+  const Navigate = useNavigate();
 
-    const handlePlaceOrder = ()=>{
-          if(delieveryAddress==="" ){
-            toast.warn("Select an address to proceed", {
+  const { cartSum, cartDiscount, cartCount } = cartState;
+  const [delieveryAddress, setDeliveryAddress] = useState("");
+
+  const { getAddress, orderState } = useContext(orderContext);
+  const { orderAddress } = orderState;
+  const { firstName, lastName, email } = userData;
+
+  const handlePlaceOrder = () => {
+    if (delieveryAddress === "") {
+      toast.warn("Select an address to proceed", {
         position: "top-center",
         autoClose: 2000,
         hideProgressBar: false,
@@ -40,8 +36,8 @@ function Checkout() {
         progress: undefined,
         theme: "light",
       });
-          }else if(finalCart.length>0){
-            toast.warn("cart is empty", {
+    } else if (finalCart.length > 0) {
+      toast.warn("cart is empty", {
         position: "top-center",
         autoClose: 2000,
         hideProgressBar: false,
@@ -50,114 +46,134 @@ function Checkout() {
         draggable: true,
         progress: undefined,
         theme: "light",
-      })
-          }
-          else{
-            displayRazorpay()
-          }
+      });
+    } else {
+      displayRazorpay();
     }
+  };
 
+  const loadScript = (src) => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = src;
 
-     const loadScript = (src)=>{
-       return new Promise((resolve)=>{
-        const script = document.createElement("script")
-        script.src = src
+      script.onload = () => {
+        resolve(true);
+      };
 
-        script.onload = ()=>{
-          resolve(true)
-        }
+      script.onerror = () => {
+        resolve(false);
+      };
 
-        script.onerror = ()=>{
-          resolve(false)
-        }
+      document.body.appendChild(script);
+    });
+  };
 
-        document.body.appendChild(script)
-       })   
-    }
-    
-
-   const displayRazorpay = async()=>{
+  const displayRazorpay = async () => {
     const res = await loadScript(
-        "https://checkout.razorpay.com/v1/checkout.js"
-      );
+      "https://checkout.razorpay.com/v1/checkout.js"
+    );
 
-      if(!res){
-        toast.error("failed to load")
-        return
-      }
+    if (!res) {
+      toast.error("failed to load");
+      return;
+    }
 
-      const options={
-        key:"rzp_test_NESeC8z8gQuo3G",
-        amount: (cartSum - cartDiscount )* 100,
-        currency: "INR",
-        name: "BikersHub",
-        description: "Thank you for shopping with us",
-        handler: function(response){
-          Navigate('/')
-          toast.success("order placed successfully")
-        },
-        prefill: {
-          name: `${firstName} ${lastName}`,
-          email: email,
-          contact: "8113887758",
+    const options = {
+      key: "rzp_test_NESeC8z8gQuo3G",
+      amount: (cartSum - cartDiscount) * 100,
+      currency: "INR",
+      name: "BikersHub",
+      description: "Thank you for shopping with us",
+      handler: function (response) {
+        Navigate("/");
+        toast.success("order placed successfully");
+      },
+      prefill: {
+        name: `${firstName} ${lastName}`,
+        email: email,
+        contact: "8113887758",
         theme: {
           color: "#F2771A",
         },
-      }
-    }
-  
-      const paymentObject = new window.Razorpay(options)
-      paymentObject.open()
-      clearAll()
-   }
+      },
+    };
 
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+    clearAll();
+  };
 
-   const clearAll=()=>{
-    cartDispatch({type:"CLEAR_CART"})
-    filterDispatch({type:"CLEAR"})
-   }
+  const clearAll = () => {
+    cartDispatch({ type: "CLEAR_CART" });
+    filterDispatch({ type: "CLEAR" });
+  };
 
-   useEffect(()=>{
-      getAddress()
-    },[])
+  useEffect(() => {
+    getAddress();
+  }, []);
 
   return (
-    <div className='order-main-container'>
-    <h2>ORDER SUMMARY</h2>
-      <div className="order-summary" style={{padding:"20px"}}>
-      
-         <h3><hr/>ORDER DETAILS<hr/></h3>
+    <div className="order-main-container">
+      <h2>ORDER SUMMARY</h2>
+      <div className="order-summary" style={{ padding: "20px" }}>
+        <h3>
+          <hr />
+          ORDER DETAILS
+          <hr />
+        </h3>
         <ol>
-        {finalCart
-          .map(item =><li>{item.title} <span style={{color:"gray"}}>(Rs.{item.price})</span> </li>) }
+          {finalCart.map((item) => (
+            <li>
+              {item.title}{" "}
+              <span style={{ color: "gray" }}>(Rs.{item.price})</span>{" "}
+            </li>
+          ))}
         </ol>
-        <div className='price-box'>
-        <hr />
-        <h3>PRICE DETAILS</h3>
-        <hr />
-         <div className="detail-box checkout-detail">
-            <p>price</p><p>{cartSum}</p>
-            <p>Discount</p><p>{cartDiscount}</p>
-            <p>Total amount</p><p>{cartSum - cartDiscount}</p>
-            <p>Total savings</p><p> {cartDiscount}</p>
-         </div>
-         <div className="deliver-to">
-             <h3> <hr />DELIVER TO <hr /></h3>
-             {delieveryAddress}
-         </div>
-       </div>
-      </div>
-       <div className="address-container">
-        <div className="all-address-box">
-       {orderAddress.map(item => 
-        <div className='single-address-box'>
-        <input type='radio' name='single-address' onClick={(e)=>setDeliveryAddress(e.target.value)}   value={`${item.name}, ${item.house}, ${item.city}, ${item.state},${item.country},${item.pincode}` }/>
-        {`${item.name}, ${item.house}, ${item.city}, ${item.state},${item.country},${item.pincode}`} </div>)}
+        <div className="price-box">
+          <hr />
+          <h3>PRICE DETAILS</h3>
+          <hr />
+          <div className="detail-box checkout-detail">
+            <p>price</p>
+            <p>{cartSum}</p>
+            <p>Discount</p>
+            <p>{cartDiscount}</p>
+            <p>Total amount</p>
+            <p>{cartSum - cartDiscount}</p>
+            <p>Total savings</p>
+            <p> {cartDiscount}</p>
+          </div>
+          <div className="deliver-to">
+            <h3>
+              {" "}
+              <hr />
+              DELIVER TO <hr />
+            </h3>
+            {delieveryAddress}
+          </div>
         </div>
-      <button className='addtocart-btn' onClick={handlePlaceOrder}>PLACE ORDER</button>
+      </div>
+      <div className="address-container">
+        <div className="all-address-box">
+          {orderAddress.map((item) => (
+            <div className="single-address-box">
+              <input
+                type="radio"
+                name="single-address"
+                onClick={(e) => setDeliveryAddress(e.target.value)}
+                value={`${item.name}, ${item.house}, ${item.city}, ${item.state},${item.country},${item.pincode}`}
+              />
+              {`${item.name}, ${item.house}, ${item.city}, ${item.state},${item.country},${item.pincode}`}{" "}
+            </div>
+          ))}
+        </div>
+        <button className="addtocart-btn" onClick={handlePlaceOrder}>
+          PLACE ORDER
+        </button>
       </div>
     </div>
-  )
+  );
 }
 
-export default Checkout
+export default Checkout;

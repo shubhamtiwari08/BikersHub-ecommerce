@@ -1,12 +1,8 @@
-import React from 'react'
-import './Navbar.css'
+import React from "react";
+import "./Navbar.css";
 
-function Count({count}) {
-  return (
-    <div className='count-num'>
-      {count}
-    </div>
-  )
+function Count({ count }) {
+  return <div className="count-num">{count}</div>;
 }
 
-export default Count
+export default Count;

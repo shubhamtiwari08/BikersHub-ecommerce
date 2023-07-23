@@ -1,34 +1,30 @@
-import React, { Children, createContext, useContext, useEffect, useReducer } from 'react'
-import { ProductContext } from './ProductContext'
+import React, {
+  Children,
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+} from "react";
+import { ProductContext } from "./ProductContext";
 
+const FilterContext = createContext();
 
+function ProductCompose({ children }) {
+  const { setProducts, products } = useContext(ProductContext);
 
-const FilterContext = createContext()
+  const ProductReducer = (state, action) => {};
 
-
-
-
-
-function ProductCompose({children}) {
-
-const {setProducts,products} = useContext(ProductContext)
-
-const ProductReducer =(state,action)=>{
-
-}
-
-  
-  
-  
-const [productState, productDispatch] = useReducer(ProductReducer,{price:1000,fastDelivery:false,rating : 5})
-
-
+  const [productState, productDispatch] = useReducer(ProductReducer, {
+    price: 1000,
+    fastDelivery: false,
+    rating: 5,
+  });
 
   return (
-    <FilterContext.Provider value={{productState,productDispatch}}>
-    {children}   
+    <FilterContext.Provider value={{ productState, productDispatch }}>
+      {children}
     </FilterContext.Provider>
-  )
+  );
 }
 
-export default ProductCompose
+export default ProductCompose;
