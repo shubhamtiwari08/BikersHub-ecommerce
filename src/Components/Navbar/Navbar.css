@@ -73,7 +73,7 @@
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
-@media screen and (min-width: 1024px) {
+@media  (max-width: 1024px) {
   .cart-count {
     right: -40px;
   }
@@ -83,7 +83,7 @@
   }
 }
 
-@media screen and (max-width:320px) {
+@media  (max-width:320px) {
     .nav-bar{
         height: 8rem;
     }
@@ -96,11 +96,29 @@
     }
 
     .Nav-btns{
-        position: absolute;
-        top: 1rem;
-        right: 7.2rem;
-        width: 7rem;
+      position: absolute;
+      width: 24rem;
+      height: 8rem;
+      padding: 1rem;
+     background-color: white;
+  }
+
+
+
+    .filter-option-mobile{
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
     }
+
+
+    .nav-bar input{
+      width: 23rem;
+      height: 2rem;
+      margin: 2rem auto 0rem auto;
+  }
+
+    /*
 
     .btn-login{
         padding: 0.3rem;
@@ -108,12 +126,6 @@
         left: 9rem;
     }
 
-    .nav-bar input{
-        width: 20rem;
-        height: 2rem;
-        margin-top: 2rem;
-        margin-right: 1.7rem;
-    }
 
     .cart-count{
         right: 2.7rem;
@@ -122,5 +134,5 @@
     .count-num{
         top: -0.3rem;
         right: 1.9rem;
-    }
+    } */
 }

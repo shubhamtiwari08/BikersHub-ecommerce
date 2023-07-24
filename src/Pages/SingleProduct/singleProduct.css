@@ -9,7 +9,7 @@
 
 .content-container{
     width: 50%;
-    height: 35rem;
+    height: 60%;
     display: flex;
     padding: 1rem;
     justify-content: center;
@@ -74,12 +74,38 @@
   }
 
 
-  @media screen and (max-width: 320px) {
+  @media (max-width: 320px) {
       .content-container{
-        height: 25rem;
+        width: 80%;
+        height: 90%;
+        flex-direction: column;
       }
        
       .image-container img{
-        width: 20rem;
+        width: 50%;
       }
+
+      .product-details-container{
+        padding: 2rem;
+        height: 10rem;
+      }
+
+      .product-details-container h3{
+        padding: 0.2rem;
+        font-size: 10px;
+      }
+
+      .product-details-container p{
+        font-size: 10px;
+      }
+
+      .product-details-container button{
+        padding: 0.4rem;
+      }
+
+      .discount{
+        padding: 0.1rem;
+        font-weight: 500;
+      }
+
   }

@@ -13,10 +13,42 @@
     overflow-y: scroll;    
 }
 
-@media screen and (max-width:320px) {
-    .hide-filter{
-        display: none;
-       }
+.filter-toggle-btn{
+    display: none;
+}
+
+@media  (max-width:320px) {
+
+
+    .product-page{
+      
+        grid-template-columns: 0.6fr 4fr ;
+        margin:auto;
+    }
+
+    .filter-toggle-btn{
+        display: block;
+        position: absolute;
+        z-index: 10;
+        left: 0.3rem;
+    }
+
+    .filter-toggle-btn button{
+        width: 4rem;
+    }
+
+    .products-container{
+        margin-top: 3rem;
+    }
+
+    .background-filter{
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.349);
+        height: 100%;
+        position: absolute;
+        z-index: 9;
+    }
+
     .mobile-view{
         display: flex;
         width: 100%;

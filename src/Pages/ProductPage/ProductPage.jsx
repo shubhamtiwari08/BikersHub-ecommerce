@@ -16,6 +16,7 @@ import { cartContext } from "../../Contexts/Cart/CartContext";
 import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
 
 function ProductPage() {
+  const [filterToggle,setFilterToggle] = useState(true)
   const { products } = useContext(ProductContext);
   const { getCart } = useContext(cartContext);
   const { wishlistState, getWishlist } = useContext(wishlistContext);
@@ -39,6 +40,12 @@ function ProductPage() {
 
   const FinalProducts = searchData;
 
+
+  const handleFilters = ()=>{
+    setFilterToggle(!filterToggle)
+    console.log(filterToggle)
+  }
+
   useEffect(() => {
     getCart();
     getWishlist();
@@ -47,8 +54,12 @@ function ProductPage() {
 
   return (
     <div className="product-page">
+     <span className="filter-toggle-btn">
+       <button className="addtocart-btn" onClick={handleFilters}>Filters</button>
+     </span>
       <div className="filter-card" >
-        <FilterCard />
+        
+        {filterToggle&&<> <div className="background-filter" onClick={handleFilters}></div><FilterCard /></> }
       </div>
       <div className="products-container">
         {FinalProducts.length > 0 ? (

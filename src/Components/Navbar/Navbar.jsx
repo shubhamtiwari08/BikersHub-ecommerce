@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faBars,
+  faBarsStaggered,
   faCartShopping,
+  faFilter,
+  faHamburger,
   faHeart,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
@@ -13,8 +17,9 @@ import { authContext } from "../../Contexts/Auth/AuthContext";
 import { cartContext } from "../../Contexts/Cart/CartContext";
 import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
 import { FilterContext } from "../../Contexts/FilterContext/FilterContext";
-
+ 
 function Navbar() {
+  const [navToggle,setNavToggle] = useState(false)
   const { isLogged, logoutHandler } = useContext(authContext);
   const { cartState,cartDispatch } = useContext(cartContext);
   const { wishlistState, wishlistDispatch } = useContext(wishlistContext);
@@ -29,6 +34,13 @@ function Navbar() {
   }
 
   const Navigate = useNavigate();
+
+  const handleFilterAndNavigation=()=>{
+      setNavToggle(!navToggle)
+      console.log()
+  }
+
+
   return (
     <div className="nav-bar">
       <h3>
@@ -45,7 +57,7 @@ function Navbar() {
         }
         autoComplete="off"
       />
-      <div className="Nav-btns">
+     {navToggle? <div className="Nav-btns">
         {isLogged ? (
           <button className="btn-login" onClick={handleLogout}>
             Logout
@@ -89,7 +101,10 @@ function Navbar() {
           color="black"
           onClick={() => Navigate("/profile")}
         />
-      </div>
+      </div>:""}
+      <span className="filter-option-mobile" onClick={handleFilterAndNavigation}>
+        { navToggle?<FontAwesomeIcon icon={faBarsStaggered} color="black" size="lg"/>:<FontAwesomeIcon icon={faBars} color="black" size="lg"/>}
+      </span>
     </div>
   );
 }

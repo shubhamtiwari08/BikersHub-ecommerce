@@ -5,7 +5,12 @@ import { useCategory } from "../../Contexts/Category/categoryContext";
 import { ProductContext } from "../../Contexts/Category/ProductContext";
 import { FilterContext } from "../../Contexts/FilterContext/FilterContext";
 
+
+
+
+
 function FilterCard() {
+  
   const { categoryId } = useParams();
   const Navigate = useNavigate();
   const { categoryData } = useContext(useCategory);
@@ -34,6 +39,7 @@ function FilterCard() {
   };
 
   return (
+  
     <div className="filter-main-container">
       <div className="filter-heading">
         <h3>FILTER</h3>
@@ -142,7 +148,8 @@ function FilterCard() {
         </label>
       </div>
     </div>
-  );
+        
+    );
 }
 
 export default FilterCard;
