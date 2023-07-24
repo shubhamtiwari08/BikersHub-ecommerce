@@ -61,3 +61,33 @@
     flex-direction: column;
 }
 
+@media screen and (max-width:320px) {
+    .product-card-body{
+        width: 80%;
+        height: 50%;
+    }
+    
+    .product-card-horizontal img{
+        width: 10rem;
+    }
+
+    .product-details{
+        width: 10rem;
+    }
+   
+    .cart-btns button{
+       padding: 0.5rem;
+       width: 9rem;
+    }
+
+    .quantity-box{
+        width: 9rem;
+        padding: 0rem;
+    }
+
+    .quantity-box button{
+        padding: 0;
+    }
+
+
+}

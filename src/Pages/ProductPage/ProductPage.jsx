@@ -49,6 +49,7 @@ function ProductPage() {
   useEffect(() => {
     getCart();
     getWishlist();
+    setFilterToggle(false)
     console.log(wishlistState, "wishlist-check");
   }, []);
 

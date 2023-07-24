@@ -54,3 +54,26 @@
         top: 8rem;
     }
 }
+
+
+@media screen and (max-width: 480px)  and (orientation:portrait) {
+
+    .order-main-container{
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+
+    .order-main-container h2{
+        padding: 0.3rem;
+        font-size: medium;
+        top: 6.5rem;
+    }
+
+    .address-container{
+        justify-content: start;
+    }
+
+    .address-container button{
+        width: 100%;
+    }
+}

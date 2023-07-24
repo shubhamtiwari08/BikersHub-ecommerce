@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 50px;
   color: #665527;
   position: relative;
@@ -83,9 +83,10 @@
   }
 }
 
-@media  (max-width:320px) {
+@media  (max-width:480px) {
     .nav-bar{
         height: 8rem;
+        border: 1px solid black;
     }
 
     .nav-bar h3 a{
@@ -97,9 +98,10 @@
 
     .Nav-btns{
       position: absolute;
-      width: 24rem;
-      height: 8rem;
-      padding: 1rem;
+      width: 100%;
+      height: 4rem;
+      top: 0rem;
+      padding: 0rem 3rem 1rem 1rem;
      background-color: white;
   }
 
@@ -115,7 +117,7 @@
     .nav-bar input{
       width: 23rem;
       height: 2rem;
-      margin: 2rem auto 0rem auto;
+      margin: 3rem auto 0rem auto;
   }
 
     /*
