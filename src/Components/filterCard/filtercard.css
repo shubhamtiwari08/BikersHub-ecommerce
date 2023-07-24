@@ -78,7 +78,7 @@
 }
 
 
-@media screen and (min-width:320px) {
+@media screen and (max-width:320px) {
    .filter-heading h3::before{
      content: "<--";
    }    

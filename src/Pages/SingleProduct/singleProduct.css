@@ -74,7 +74,7 @@
   }
 
 
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 320px) {
       .content-container{
         height: 25rem;
       }

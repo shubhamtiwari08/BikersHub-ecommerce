@@ -13,7 +13,7 @@
     overflow-y: scroll;    
 }
 
-@media screen and (min-width:320px) {
+@media screen and (max-width:320px) {
     .hide-filter{
         display: none;
        }
