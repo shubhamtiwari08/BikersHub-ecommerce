@@ -17,8 +17,8 @@ import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
 
 function ProductPage() {
   const { products } = useContext(ProductContext);
-  const {getCart} = useContext(cartContext)
-  const {wishlistState,getWishlist}=useContext(wishlistContext)
+  const { getCart } = useContext(cartContext);
+  const { wishlistState, getWishlist } = useContext(wishlistContext);
 
   const {
     filterState: { price, sort, word, rating, categories },
@@ -40,14 +40,16 @@ function ProductPage() {
   const FinalProducts = searchData;
 
   useEffect(() => {
-    getCart()
-    getWishlist()
-    console.log(wishlistState,"wishlist-check")
+    getCart();
+    getWishlist();
+    console.log(wishlistState, "wishlist-check");
   }, []);
 
   return (
     <div className="product-page">
-      <FilterCard />
+      <div className="filter-card" >
+        <FilterCard />
+      </div>
       <div className="products-container">
         {FinalProducts.length > 0 ? (
           FinalProducts.map((item) => <ProductCard product={item} />)

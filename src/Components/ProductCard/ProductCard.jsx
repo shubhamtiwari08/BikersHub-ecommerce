@@ -54,7 +54,7 @@ function ProductCard({ product }) {
             {rating}{" "}
           </p>
         </div>
-        {finalCart.find((item) => product._id === item._id) ? (
+        {finalCart?.find((item) => product._id === item._id) ? (
           <button
             className="addtocart-btn"
             style={{
