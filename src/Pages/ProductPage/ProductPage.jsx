@@ -43,7 +43,6 @@ function ProductPage() {
 
   const handleFilters = ()=>{
     setFilterToggle(!filterToggle)
-    console.log(filterToggle)
   }
 
   useEffect(() => {
@@ -60,7 +59,8 @@ function ProductPage() {
      </span>
       <div className="filter-card" >
         
-        {filterToggle&&<> <div className="background-filter" onClick={handleFilters}></div><FilterCard /></> }
+         <div className="desktop-filter"><FilterCard /></div> 
+        {filterToggle&&<><div className="background-filter" onClick={handleFilters}></div><FilterCard /></> }
       </div>
       <div className="products-container">
         {FinalProducts.length > 0 ? (

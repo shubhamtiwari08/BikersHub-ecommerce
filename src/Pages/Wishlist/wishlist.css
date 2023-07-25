@@ -14,6 +14,7 @@
 
 .wishlist-box{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .wishlist-box h1{
@@ -24,3 +25,15 @@
     width: 27rem;
 }
 
+@media screen and (max-width:480px ) {
+    .empty-wishlist-img{
+        width: 20rem;
+    }
+
+    .wishlist-box{
+     
+        overflow-y: auto;
+        align-items: center;
+        justify-content: center;
+    }
+}

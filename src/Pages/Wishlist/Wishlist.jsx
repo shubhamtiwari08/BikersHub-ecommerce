@@ -26,7 +26,7 @@ function Wishlist() {
             />
           </div>
         ) : (
-          finalWishlist.map((item) => <WishlistCard product={item} />)
+          finalWishlist.map((item) => <><WishlistCard product={item} /></>)
         )}
       </div>
     </div>

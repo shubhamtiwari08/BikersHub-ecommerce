@@ -56,17 +56,17 @@
 }
 
 
-@media screen and (max-width: 480px)  and (orientation:portrait) {
+@media screen and (max-width: 480px) {
 
     .order-main-container{
         flex-direction: column;
-        margin-top: 3rem;
+        margin-top: 6rem;
     }
 
     .order-main-container h2{
         padding: 0.3rem;
         font-size: medium;
-        top: 6.5rem;
+        top: 8rem;
     }
 
     .address-container{
@@ -76,4 +76,6 @@
     .address-container button{
         width: 100%;
     }
+
+    
 }

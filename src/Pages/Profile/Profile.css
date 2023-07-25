@@ -64,3 +64,15 @@
     border-radius: 5px;
 }  
 
+
+@media screen and (max-width:480px) {
+    .profile-content-container{
+         width: 20rem;
+    }
+
+    .profile-btns button{
+        padding: 1rem;
+        width: 10rem;
+    }
+
+}

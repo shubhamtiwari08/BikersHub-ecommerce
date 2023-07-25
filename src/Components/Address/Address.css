@@ -34,7 +34,7 @@
 }
 
 .address-form{
-    position: absolute;
+    position: fixed;
     z-index: 99;
     top: 19rem;
     background-color: white;
@@ -114,4 +114,39 @@
     background-color: var(--Neutral-color);
     color: white;
     font-weight: 700;
+}
+
+@media screen and (max-width:480px) {
+    
+    .all-address-box{
+        width: 15rem;
+    }
+
+    .address-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .single-address-box{
+        height: 8rem;
+        width: 13rem;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .address-form{
+        left: 2.3rem;
+        top: 14.3rem;
+        height: 25rem;
+        width: 20rem;
+    }
+
+    .address-form input{
+        height: 1.5rem;
+    }
+
 }

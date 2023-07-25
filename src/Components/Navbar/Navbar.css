@@ -73,6 +73,12 @@
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
+.filter-option-mobile{
+  display: none;
+}
+
+
+
 @media  (max-width: 1024px) {
   .cart-count {
     right: -40px;
@@ -84,9 +90,17 @@
 }
 
 @media  (max-width:480px) {
+
+  .filter-option-mobile{
+    display: block;
+  }
+
+  .desktop-nav{
+    display: none;
+  }
+
     .nav-bar{
         height: 8rem;
-        border: 1px solid black;
     }
 
     .nav-bar h3 a{

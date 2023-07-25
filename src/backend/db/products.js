@@ -1,4 +1,4 @@
-import { useContext } from "react";
+
 import { v4 as uuid } from "uuid";
 
 /**
@@ -152,7 +152,7 @@ category : "Helmets"
   imageUrl: "https://m.media-amazon.com/images/I/618i8O0H8eL.jpg",
   fastDelivery: true,
   discount: 0.3,
-  rating: 4.2,
+  rating: 1.2,
   count: 0,
   categoryName: "Half Face",
   category : "Helmets"
@@ -242,7 +242,7 @@ category : "Helmets"
   imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR94YsDUSRZmPXCm6vSdI3XZ2odxzr7CVGeg-LAES-keO_eKDQEbwDP3rC0u6yYsGtrlI8&usqp=CAU",
   fastDelivery: true,
   discount: 0.15,
-  rating: 4.0,
+  rating: 2.0,
   count: 0,
   category: "Lights",
   categoryName: "Brake Lights"
@@ -301,7 +301,7 @@ category : "Helmets"
   imageUrl: "https://i.ebayimg.com/images/g/A~YAAOSwCz1jhBLp/s-l400.jpg",
   fastDelivery: true,
   discount: 0.3,
-  rating: 4.6,
+  rating: 3.6,
   count: 0,
   category: "Lights",
   categoryName: "Spotlights"
@@ -389,7 +389,7 @@ category : "Helmets"
     imageUrl: "https://5.imimg.com/data5/CP/JU/MY-12454918/motorcycle-indicators-250x250.jpg",
     fastDelivery: true,
     discount: 0.2,
-    rating: 4.5,
+    rating: 2.5,
     count: 0,
     category: "Lights",
     categoryName: "Taillights"
@@ -433,7 +433,7 @@ category : "Helmets"
       imageUrl: "https://m.media-amazon.com/images/I/51RxEOnS-XL._AC_UF894,1000_QL80_.jpg",
       fastDelivery: true,
       discount: 0.2,
-      rating: 4.5,
+      rating: 2.5,
       count: 0,
       category: "Horns",
       categoryName: "Air Horns"

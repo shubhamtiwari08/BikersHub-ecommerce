@@ -19,6 +19,10 @@
 
 @media  (max-width:480px) {
 
+    .desktop-filter{
+        display: none;
+
+    }
 
     .product-page{
       
