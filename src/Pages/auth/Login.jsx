@@ -15,7 +15,7 @@ function Login() {
   };
 
   const [loginData, setLoginData] = useState(defaultData);
-  const guest = { email: "pandu@gmail.com", password: "pandusandu" };
+  const guest = { email: "adarshbalika@gmail.com", password: "adarshbalika" };
   const Navigate = useNavigate();
 
   const handleInput = (e) => {
@@ -38,6 +38,7 @@ function Login() {
         setUserData(data.foundUser);
         const { encodedToken } = data;
         localStorage.setItem("Token", encodedToken);
+        console.log(localStorage.getItem("Token"),"tokeeeeeeeeeeen")
         setLoginData(defaultData);
         Navigate("/productpage");
         setIsLogged(true);

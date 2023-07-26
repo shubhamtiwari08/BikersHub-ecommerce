@@ -4,6 +4,7 @@
     width: 100vw;
     height: 100vh;
     padding: 2rem;
+
 }
 
 .categories-container{
@@ -60,10 +61,11 @@
 
 .carousel-bikes{
     height: 80rem;
+
 }
 
 .carousel .slider-wrapper{
-    height: 52rem;
+    height: 50rem;
 }
 
 
@@ -82,13 +84,29 @@
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+
  
+
+
 @media screen and (max-width:1024px) {
-    .carousel .slider-wrapper{
+    .slider-wrapper{
         width: 30rem;
     }
 
+    .carousel .slider-wrapper{
+        height: 32rem;
+     }
+
+     .Shop-now{
+        top: 25rem;
+     }
+
+     .categories-container{
+        height: 30rem;        
+     }
+     
 }
+
 
 @media screen and (max-width:480px){
 

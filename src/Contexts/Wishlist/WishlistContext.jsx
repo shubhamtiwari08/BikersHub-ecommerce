@@ -5,22 +5,26 @@ import Toast from "../../Components/Toast/Toast";
 export const wishlistContext = createContext();
 
 function WishlistProvider({ children }) {
-  const initialWishlistState = { wishlist: [], wishlistCount: 0 };
+   
 
   const [wishlistState, wishlistDispatch] = useReducer(
     wishlistReducer,
-    initialWishlistState
+    { wishlist: [], wishlistCount: 0 }
   );
+ 
 
-  const Token = localStorage.getItem("Token");
+  console.log(wishlistState)
+
+  
 
   const getWishlist = async () => {
     try {
       const response = await fetch("/api/user/wishlist", {
         headers: {
-          authorization: Token,
+          authorization: localStorage.getItem("Token"),
         },
       });
+      console.log(localStorage.getItem("Token"),)
       const wishlistData = await response.json();
       if (response.status === 200 || 201) {
         console.log(wishlistData)
@@ -39,17 +43,19 @@ function WishlistProvider({ children }) {
       const response = await fetch("/api/user/wishlist", {
         method: "POST",
         headers: {
-          authorization: Token,
+          authorization: localStorage.getItem("Token"),
         },
         body: JSON.stringify({ product }),
       });
       const wishlistData = await response.json();
+      console.log(response,wishlistData)
 
-      if (response.status === 201 || 200) {
+      if (response.status === 201) {
+        console.log("addwish")
         wishlistDispatch({
           type: "ADD_TO_WISHLIST",
           payload: wishlistData.wishlist,
-        });
+        })
       }
       Toast({ type: "success", message: "added to wishlist" });
     } catch (error) {
@@ -62,7 +68,7 @@ function WishlistProvider({ children }) {
       const response = await fetch(`/api/user/wishlist/${product._id}`, {
         method: "DELETE",
         headers: {
-          authorization: Token,
+          authorization: localStorage.getItem("Token"),
         },
       });
       console.log("working");

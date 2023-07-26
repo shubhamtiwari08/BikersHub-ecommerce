@@ -1,6 +1,6 @@
 import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./ProductCard.css";
 import { useNavigate } from "react-router";
 import { cartContext } from "../../Contexts/Cart/CartContext";
@@ -20,7 +20,9 @@ function ProductCard({ product }) {
   const finalWishlist = wishlistState?.wishlist;
 
 
-  console.log(wishlistState,finalWishlist)
+ 
+
+
 
   return (
     <div className="product-container">
