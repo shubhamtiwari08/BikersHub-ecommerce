@@ -41,6 +41,7 @@ function FilterCard() {
   return (
   
     <div className="filter-main-container">
+      <div className="filter-sub-container">
       <div className="filter-heading">
         <h3>FILTER</h3>
         <button onClick={clear}>CLEAR</button>
@@ -146,6 +147,7 @@ function FilterCard() {
           />
           Low to High
         </label>
+      </div>
       </div>
     </div>
         

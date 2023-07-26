@@ -90,20 +90,24 @@
 
 @media screen and (max-width:1024px) {
     .slider-wrapper{
-        width: 30rem;
+        width: 27rem;
     }
 
     .carousel .slider-wrapper{
-        height: 32rem;
+        height: 27rem;
      }
 
      .Shop-now{
-        top: 25rem;
+        top: 20rem;
+        padding: 1rem;
      }
 
-     .categories-container{
-        height: 30rem;        
+     .categories-container h2{
+        font-size: 10px ;
      }
+     
+     
+     
      
 }
 

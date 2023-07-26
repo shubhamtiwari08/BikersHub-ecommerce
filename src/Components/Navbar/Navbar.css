@@ -33,7 +33,10 @@
 
 /**count-component**/
 .count-num {
-  padding: 1px 4px;
+  width: 1.4rem;
+  height: 1.4rem;
+  padding: 0px 1px 2px 2px;
+  border: 3px solid white;
   border-radius: 50%;
   background-color: red;
   color: white;

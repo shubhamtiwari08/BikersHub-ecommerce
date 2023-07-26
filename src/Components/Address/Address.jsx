@@ -113,71 +113,76 @@ function Address({ values }) {
         </div>
       </div>
       {inputToggle ? (
-        <div className="address-form">
-          <form type="submit">
-            <input
-              type="text"
-              onChange={handleInput}
-              value={inputAddress?.name}
-              name="name"
-              placeholder="name"
-            />
-            <input
-              type="text"
-              onChange={handleInput}
-              value={inputAddress?.house}
-              name="house"
-              placeholder="house"
-            />
-            <input
-              type="text"
-              onChange={handleInput}
-              value={inputAddress?.city}
-              name="city"
-              placeholder="city"
-            />
-            <input
-              type="text"
-              onChange={handleInput}
-              value={inputAddress?.state}
-              name="state"
-              placeholder="state"
-            />
-            <input
-              type="text"
-              onChange={handleInput}
-              value={inputAddress?.country}
-              name="country"
-              placeholder="country"
-            />
-            <input
-              type="text"
-              onChange={handleInput}
-              value={inputAddress?.pincode}
-              name="pincode"
-              placeholder="pincode"
-            />
-            <input
-              type="text"
-              onChange={handleInput}
-              value={inputAddress?.mobile}
-              name="mobile"
-              placeholder="mobile"
-            />
-            <div className="address-btns">
-              <button
-                onClick={(e) => handleSubmit(e, inputAddress._id, inputAddress)}
-              >
-                {edit ? "update" : "save"}
-              </button>
-              <button onClick={() => setInputToggle(!inputToggle)}>
-                Cancel
-              </button>
-              <button onClick={handleDummyAddress}>
-                fill with Dummy details
-              </button>
-            </div>
-          </form>
+        <div className="address-input-container" >
+          <div className="address-form">
+          <h2>Address details</h2>
+            <form type="submit">
+              <input
+                type="text"
+                onChange={handleInput}
+                value={inputAddress?.name}
+                name="name"
+                placeholder="name"
+              />
+              <input
+                type="text"
+                onChange={handleInput}
+                value={inputAddress?.house}
+                name="house"
+                placeholder="house"
+              />
+              <input
+                type="text"
+                onChange={handleInput}
+                value={inputAddress?.city}
+                name="city"
+                placeholder="city"
+              />
+              <input
+                type="text"
+                onChange={handleInput}
+                value={inputAddress?.state}
+                name="state"
+                placeholder="state"
+              />
+              <input
+                type="text"
+                onChange={handleInput}
+                value={inputAddress?.country}
+                name="country"
+                placeholder="country"
+              />
+              <input
+                type="text"
+                onChange={handleInput}
+                value={inputAddress?.pincode}
+                name="pincode"
+                placeholder="pincode"
+              />
+              <input
+                type="text"
+                onChange={handleInput}
+                value={inputAddress?.mobile}
+                name="mobile"
+                placeholder="mobile"
+              />
+              <div className="address-btns">
+                <button
+                  onClick={(e) =>
+                    handleSubmit(e, inputAddress._id, inputAddress)
+                  }
+                >
+                  {edit ? "update" : "save"}
+                </button>
+                <button onClick={() => setInputToggle(!inputToggle)}>
+                  Cancel
+                </button>
+                <button onClick={handleDummyAddress}>
+                  fill with Dummy details
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       ) : (
         <button
