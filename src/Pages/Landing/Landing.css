@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     padding: 2rem;
 
 }
@@ -94,7 +94,7 @@
     }
 
     .carousel .slider-wrapper{
-        height: 27rem;
+        height: 33rem;
      }
 
      .Shop-now{

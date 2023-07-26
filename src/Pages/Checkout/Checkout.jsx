@@ -9,12 +9,15 @@ import CartDetails from "../../Components/cartdetail/CartDetails";
 import { toast } from "react-toastify";
 import { FilterContext } from "../../Contexts/FilterContext/FilterContext";
 import { authContext } from "../../Contexts/Auth/AuthContext";
+import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
 
 function Checkout() {
-  const { cartState, cartDispatch } = useContext(cartContext);
+  const { cartState, removeFromCart, cartDispatch } = useContext(cartContext);
+  const {wishlistState,removeFromWishlist} = useContext(wishlistContext)
   const { filterDispatch } = useContext(FilterContext);
   const { userData } = useContext(authContext);
   const finalCart = cartState.cart;
+  const finalWishlist = wishlistState.wishlist;
   const Navigate = useNavigate();
 
   const { cartSum, cartDiscount, cartCount } = cartState;
@@ -104,9 +107,11 @@ function Checkout() {
     clearAll();
   };
 
+  
+
   const clearAll = () => {
-    cartDispatch({ type: "CLEAR_CART" });
-    filterDispatch({ type: "CLEAR" });
+    finalCart.map((product)=>removeFromCart(product))
+    finalWishlist.map((product)=>removeFromWishlist(product))
   };
 
   useEffect(() => {
@@ -156,7 +161,7 @@ function Checkout() {
       </div>
       <div className="address-container">
         <div className="all-address-box">
-          {orderAddress.map((item) => (
+          {orderAddress?.map((item) => (
             <div className="single-address-box">
               <input
                 type="radio"
