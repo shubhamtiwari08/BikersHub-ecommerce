@@ -43,7 +43,7 @@ function Routing() {
         <Route path="/mockman" element={<MockApi />} />
         <Route path="/loading" element={<Loading />} />
         <Route path="/orderSummary" element={<Checkout />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={ <RequireAuth><Profile /></RequireAuth>} />
       </Routes>
     </div>
   );
