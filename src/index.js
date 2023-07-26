@@ -11,7 +11,6 @@ import FilterProvider from "./Contexts/FilterContext/FilterContext";
 import AuthProvider from "./Contexts/Auth/AuthContext";
 import CartProvder from "./Contexts/Cart/CartContext";
 import WishlistProvider from "./Contexts/Wishlist/WishlistContext";
-import AddressProvider from "./Contexts/Address/AddressContext";
 import OrderProvider from "./Contexts/OrderContext/OrderContext";
 
 // Call make Server

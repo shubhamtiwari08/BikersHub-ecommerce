@@ -54,7 +54,6 @@ function Login() {
   };
 
   const handleSubmit = (e) => {
-    console.log("helo");
     e.preventDefault();
     handleLogin(loginData);
   };
