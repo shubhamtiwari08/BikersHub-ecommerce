@@ -1,22 +1,21 @@
- <p>Features</p>
+<h1>Features</h1>
 
-<h1>Home Page</h1>
-<h1>Product Listing Page</h1>
-<h1>Single Product Page</h1>
+<p>Home Page</p>
+<p>Product Listing Page</p>
+<p>Single Product Page</p>
 
 <p>Filters by</p>
-<h1>Price</h1>
-<h1>Category</h1>
-<h1>Ratings</h1>
+<p>Price</p>
+<p>Category</p>
+<p>Ratings</p>
 
-<h1>Wishlist Management</h1>
-<h1>Cart Management</h1>
-<h1>Search</h1>
-<h1>Loading & Alerts</h1>
-<h1>Authentication</h1>
-<h1>Sign-up</h1>
-<h1>Login</h1>
-<h1>Logout</h1>
-<h1>Address Management</h1>
-<h1>Checkout</h1>
-
+<p>Wishlist Management</p>
+<p>Cart Management</p>
+<p>Search</p>
+<p>Loading & Alerts</p>
+<p>Authentication</p>
+<p>Sign-up</p>
+<p>Login</p>
+<p>Logout</p>
+<p>Address Management</p>
+<p>Checkout</p>
