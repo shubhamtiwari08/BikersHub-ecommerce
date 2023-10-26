@@ -81,7 +81,6 @@ function WishlistProvider({ children }) {
           payload: wishlistData.wishlist,
         });
       }
-      Toast({ type: "success", message: "removed from cart" });
     } catch (error) {
       Toast({ type: "error", message: error });
     }

@@ -121,6 +121,7 @@ function Checkout() {
   return (
     <div className="order-main-container">
       <h2>ORDER SUMMARY</h2>
+      <div className="order-summary-conatiner">
       <div className="order-summary" style={{ padding: "20px" }}>
         <h3>
           <hr />
@@ -155,7 +156,7 @@ function Checkout() {
               <hr />
               DELIVER TO <hr />
             </h3>
-            {delieveryAddress}
+            {delieveryAddress ? delieveryAddress : "Please select address"}
           </div>
         </div>
       </div>
@@ -176,6 +177,7 @@ function Checkout() {
         <button className="addtocart-btn" onClick={handlePlaceOrder}>
           PLACE ORDER
         </button>
+      </div>
       </div>
     </div>
   );

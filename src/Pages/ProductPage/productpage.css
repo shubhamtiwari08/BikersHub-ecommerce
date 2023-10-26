@@ -3,6 +3,7 @@
     width: 100vw;
     grid-template-columns: 1fr 4fr;
     background-color: var(--background-color);
+    overflow-y: auto;
 }
 
 .products-container{
@@ -26,7 +27,6 @@
     }
 
     .product-page{
-      
         grid-template-columns: 0.6fr 4fr ;
         margin:auto;
     }

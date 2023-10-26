@@ -96,13 +96,13 @@ function Address({ values }) {
               {`${item.name}, ${item.house}, ${item.city}, ${item.state},${item.country},${item.pincode}`}
               <div className="single-address-btns">
                 <button
-                  className="remove-btn btn"
+                  className="remove-btn"
                   onClick={() => handleRemoveAddress(item._id)}
                 >
                   remove
                 </button>
                 <button
-                  className="edit-btn btn"
+                  className="edit-btn"
                   onClick={() => handleEditAddress(item)}
                 >
                   edit

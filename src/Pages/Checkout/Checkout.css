@@ -1,19 +1,23 @@
 .order-main-container{
-    width: 100vw;
-    height: 100vh;
+    margin-top: 1rem;
+    width: 100%;
+    height: max-content;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 1rem;
 }
 
 .order-main-container h2{
-   position: absolute;
-   top: 14rem;
-   background-color: var(--Contrast-color);
+   background-color: var(--secondary-color);
    color: white;
    padding: 1rem;
    border-radius: 5px;
    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.order-summary-conatiner{
+    display: flex;
 }
 
 .order-summary{

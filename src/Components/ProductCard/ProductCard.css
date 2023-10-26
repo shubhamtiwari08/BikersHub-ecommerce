@@ -64,6 +64,7 @@ overflow: hidden;
     background-color: transparent;
     top: 1rem;
     right: 1rem;
+    cursor: pointer;
 }
 
 .addtocart-btn{

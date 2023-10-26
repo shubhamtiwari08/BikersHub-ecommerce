@@ -66,7 +66,6 @@ function Navbar() {
               style={{
                 textDecoration: "none",
                 backgroundColor: "transparent",
-                color: "brown",
               }}
             >
               Login
@@ -119,7 +118,6 @@ function Navbar() {
                 style={{
                   textDecoration: "none",
                   backgroundColor: "transparent",
-                  color: "brown",
                 }}
               >
                 Login

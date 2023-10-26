@@ -2,9 +2,8 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
-  
-    overflow: scroll;
-    height:100vh;
+    overflow-y: auto;
+    height: 80vh;
 }
 
 .categories-container{
@@ -126,20 +125,48 @@
 
 @media screen and (max-width:480px){
 
-     
-
-   .landing-main-container{
-        flex-direction: column;
-        justify-content: start;
-       
-    }
-    .categories-container{
-        align-items: center;
-    }
-
     .categories-container h2{
-        width: 18rem;
+        font-size: large;
+        width: 10rem;
     }
+
+    .categories-title{
+        position: sticky;
+        top: 0;
+    }
+    
+    
+    
+    .title-container{
+        position: relative;
+    }
+    
+    .hero-title{
+        top: 0;
+        font-size: 8px;
+        line-height: 18px;
+        
+    }
+
+    .Shop-now{
+        padding: 0.2rem;
+        font-size: small;
+    }
+    
+    .bike-part,.covered{
+       padding: 0 0.2rem;
+       letter-spacing: normal;
+    }
+    
+    .covered{
+        background-color: rgb(41, 188, 41);
+    }
+    
+    .category-box{
+        flex-direction: column;
+    }
+   
+
 }
  
  

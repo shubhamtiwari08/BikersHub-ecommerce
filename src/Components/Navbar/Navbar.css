@@ -34,7 +34,6 @@
   border-radius: 2px;
   border: none;
   outline: none;
-  background-color: var(--Neutral-color);
 }
 
 /**count-component**/
@@ -55,7 +54,7 @@
   right: -0.8rem;
 }
 
-.fa-heart,.fa-cart-shopping,.fa-user{
+.Nav-btns .fa-heart,.fa-cart-shopping,.fa-bars,.fa-bars-staggered,.fa-user{
   color:var(--Neutral-color)
 }
 
@@ -86,14 +85,21 @@
 
 /**login-btn**/
 .btn-login {
-  padding: 7px 12px;
+  padding: 3px 8px;
   background-color: var(--secondary-color);
   color: var(--primary-color);
   font-weight: bold;
+  font-size: large;
   border-radius: 5px;
   border: none;
   cursor: pointer;
 }
+
+.btn-login a{
+  color: var(--primary-color);
+}
+
+
 
 .btn-login:hover{
   background-color: var(--Contrast-color);
@@ -138,7 +144,7 @@
       height: 4rem;
       top: 0rem;
       padding: 0rem 3rem 1rem 1rem;
-     background-color: white;
+      background-color: var(--primary-color);
   }
 
 
@@ -151,9 +157,9 @@
 
 
     .nav-bar input{
-      width: 23rem;
+      width: 21.4rem;
       height: 2rem;
-      margin: 3rem auto 0rem auto;
+      margin: 3rem auto 0rem 1rem;
   }
 
     /*

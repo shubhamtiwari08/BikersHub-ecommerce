@@ -3,8 +3,6 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr ;
     height: 70vh;        
-    background-color: var(--Neutral-color);
- 
 }
 
 /* width */
@@ -59,11 +57,14 @@
     .cart-main-container{
       display: flex;
       flex-direction: column;
+      margin-top: 2rem;
       width: 100%;
-      height: 100%;
+      height: 100vh;
+      overflow-y: scroll;
     }
     .all-products-container{
-      height: 12rem;
+      height: 18rem;
+      gap: 1rem;
     }
     
     
