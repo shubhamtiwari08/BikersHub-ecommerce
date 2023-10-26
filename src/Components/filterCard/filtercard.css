@@ -17,7 +17,7 @@
 
 .filter-main-container h3{
     color: var(--primary-color);
-    background-color: var(--Neutral-color);
+    background-color: var(--Accent-color);
     border-radius: 5px;
     font-size: medium;
     font-weight: 600;
@@ -40,10 +40,18 @@
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    color: var(--Contrast-color);
+    color: var(--primary-color);
     font-weight: bold;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+
+.price-range-container{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: white;
 }
 
 
@@ -55,6 +63,7 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     padding: 1rem;
     border-radius: 5px;
+    background-color: white;
 }
 
 .sort-container input{
@@ -69,12 +78,6 @@
     margin-right: 0.5rem;
 }
 
-
-.price-range-container{
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    padding: 1rem;
-    border-radius: 5px;
-}
 
 .price-range{
     display: flex;

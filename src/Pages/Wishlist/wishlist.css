@@ -7,9 +7,10 @@
 }
 
 .wishlist-body h1{
-    color: var(--Contrast-color);
+    color: var(--secondary-color);
     text-shadow: 2px 2px 2px black;
     margin-top: 5rem;
+    text-transform: uppercase;
 }
 
 .wishlist-box{
@@ -18,11 +19,12 @@
 }
 
 .wishlist-box h1{
-    color: var(--Contrast-color);
+    color: var(--secondary-color);
 }
 
 .empty-wishlist-img{
-    width: 27rem;
+    width: 18rem;
+
 }
 
 @media screen and (max-width:480px ) {

@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr ;
     height: 70vh;        
+    background-color: var(--Neutral-color);
  
 }
 
@@ -37,7 +38,7 @@
   }
 
   .cart-empty{
-    color: var(--Contrast-color);
+    color: var(--secondary-color);
     text-align: center;
     text-shadow: 2px 2px 2px black;
     font-size: xx-large;
@@ -50,6 +51,8 @@
   .cart-empty img{
     margin-top: 5rem;
     width: 30rem;
+    filter: contrast(100%);
+    -webkit-filter: contrast(100%)
   }
 
   @media (max-width:480px) {
