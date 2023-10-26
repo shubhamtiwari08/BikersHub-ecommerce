@@ -1,26 +1,33 @@
 .landing-main-container{
     display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    height: 80vh;
+    flex-direction: column;
     padding: 2rem;
-
+    background-color: var(--Neutral-color);
+    overflow: scroll;
+    height:100vh;
 }
 
 .categories-container{
     padding: 1.2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 85vh;     
+    align-items: center;
+    flex-wrap: wrap;
     border-radius: 5px;
+    height: 38rem;
+    gap: 1rem;
 }
+
+.category-box{
+    display: flex;
+}
+
 
 .categories-container h2{
     background-color: var(--primary-color);
     color: white;
     border-radius: 5px;
-    padding: 0.3rem 0rem;
+    width: 30%;
     text-align: center;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
@@ -30,9 +37,7 @@
     top: 0;
 }
 
-.hero-img{
-    position: relative;
-}
+ 
 
 .title-container{
     position: relative;
@@ -45,57 +50,64 @@
     border-radius: 5px;
     padding: 0.4rem;
     line-height: 2.3rem;
+    right: 0;
+    line-height: 3rem;
+    text-align: right;
     
 }
 
 .bike-part,.covered{
-    background-color: var(--Contrast-color);
+    background-color: var(--secondary-color);
     border-radius: 5px;
     padding: 0.2rem;
     color: white;
+    letter-spacing: 0.8rem;
+    font-weight: 400;
+    padding-left: 1rem;
 }
 
 .covered{
     background-color: rgb(41, 188, 41);
 }
 
-.carousel-bikes{
-    height: 80rem;
+.hero-bike-img{
 
+    filter: invert(100%);
+    -webkit-filter: invert(16.5%);
 }
 
-.carousel .slider-wrapper{
-    height: 50rem;
-}
 
+.hero-bike-img img{
+    width: 65%;
+}
 
 
 .Shop-now{
-    position: absolute;
-    left: 0.2rem;
-    top: 40rem;
-    padding: 1.5rem;
     border-radius:5px;
     font-size: x-large;
-    background-color: var(--Contrast-color);
+    background-color: var(--secondary-color);
     border: none;
     color: white;
     font-weight: bolder;
     cursor: pointer;
+    padding: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+/* category box */
+
+.black-box{
+    width: 13rem;
+    height: 8rem;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}
+ 
  
 
 
 @media screen and (max-width:1024px) {
-    .slider-wrapper{
-        width: 27rem;
-    }
-
-    .carousel .slider-wrapper{
-        height: 33rem;
-     }
+  
 
      .Shop-now{
         top: 20rem;
@@ -114,14 +126,12 @@
 
 @media screen and (max-width:480px){
 
-    .carousel-bikes{
-        height: 55rem;
-    }
+     
 
    .landing-main-container{
         flex-direction: column;
         justify-content: start;
-        overflow-y: auto;
+       
     }
     .categories-container{
         align-items: center;

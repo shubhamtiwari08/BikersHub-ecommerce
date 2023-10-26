@@ -2,13 +2,14 @@
   padding:0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Teko', sans-serif;
 }
 
 :root{
   --primary-color: #1e1d1d;
   --secondary-color: #cf2c2c;
   --tertiary-color:#5F021F;
-  --Accent-color:#f9f221;
+  --Accent-color:#eaac1b;
   --Neutral-color:#d4d4d4;
   --Contrast-color:#A4161B;
 }

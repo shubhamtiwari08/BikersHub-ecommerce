@@ -19,11 +19,6 @@ function ProductCard({ product }) {
   const finalCart = cartState?.cart;
   const finalWishlist = wishlistState?.wishlist;
 
-
- 
-
-
-
   return (
     <div className="product-container">
       <div className="product-image">
@@ -61,7 +56,7 @@ function ProductCard({ product }) {
             className="addtocart-btn"
             style={{
               backgroundColor: "var(--primary-color)",
-              color: "var(--Neutral-color)",
+              color: "var(--Accent-color)",
             }}
             onClick={() => Navigate("/cart")}
           >

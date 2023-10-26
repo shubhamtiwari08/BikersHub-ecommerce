@@ -4,7 +4,7 @@ import Category from "../../Components/Category/Category";
 import { useCategory } from "../../Contexts/Category/categoryContext";
 import { FilterContext } from "../../Contexts/FilterContext/FilterContext";
 import { useNavigate } from "react-router";
-import { Carousel } from "react-responsive-carousel";
+ 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { cartContext } from "../../Contexts/Cart/CartContext";
 import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
@@ -20,8 +20,8 @@ function Landing() {
 
   const { categoryData, categoriesHandle } = useContext(useCategory);
   const { filterDispatch } = useContext(FilterContext);
-  const {getCart} = useContext(cartContext)
-  const {getWishlist}=useContext(wishlistContext)
+  const { getCart } = useContext(cartContext);
+  const { getWishlist } = useContext(wishlistContext);
 
   console.log(categoryData);
 
@@ -32,8 +32,8 @@ function Landing() {
   useEffect(() => {
     categoriesHandle();
     filterDispatch({ type: "CLEAR" });
-    getCart()
-    getWishlist()
+    getCart();
+    getWishlist();
   }, []);
 
   return (
@@ -42,52 +42,47 @@ function Landing() {
         <div>
           <div className="hero-title">
             <h1>
-              LOOKING <br /> FOR <br />{" "}
+              Looking for {" "}
+              <br />
               <span className="bike-part">BIKE PARTS?</span>
             </h1>
-            <h2>
-              Don't worry ! <br /> we got you <br />{" "}
+            <h1>
+              Don't worry ! we got you {" "} <br />
               <span className="covered">covered.</span>{" "}
-            </h2>
+            </h1>
+            <br />
+            <button
+            className="Shop-now button"
+            onClick={() => Navigate("/productpage")}
+          >
+            SHOP NOW
+          </button>
           </div>
-          <div className="carousel-bikes">
-            <Carousel
-              showArrows={false}
-              showStatus={false}
-              transitionTime={1000}
-              interval={5000}
-              showThumbs={false}
-              infiniteLoop={true}
-              autoPlay={true}
-            >
-              {images.map((image, index) => (
-                <div key={index}>
-                  <img
-                    src={image}
-                    alt="bike-img"
-                    style={{ height: "50rem", objectFit: "cover" }}
-                  />
-                </div>
-              ))}
-            </Carousel>
+          <div className="hero-bike-img">
+            <img
+              className="hero-img"
+              src="https://www.nieuwsmotor.nl/images/motornieuws/2018/10_oktober/2019_Triumph_1200_scrambler/2019_Triumph-Motorcycles_Scrambler_1200_XC_Black.jpg"
+              alt="hero-image"
+            />
+          
           </div>
+          
         </div>
-        <button
-          className="Shop-now button"
-          onClick={() => Navigate("/productpage")}
-        >
-          SHOP NOW
-        </button>
       </div>
       <div className="categories-container">
         <h2 className="category-title">Categories</h2>
+        <div className="category-box">
         {categoryData.map((item) => (
+         
           <Category
             image={item.image}
             categoryName={item.categoryName}
             id={item.id}
           />
+     
+          
         ))}
+             </div>
       </div>
     </div>
   );
