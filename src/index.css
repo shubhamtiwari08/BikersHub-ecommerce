@@ -5,12 +5,12 @@
 }
 
 :root{
-  --primary-color: #1C1919;
-  --secondary-color: #F2771A;
+  --primary-color: #1e1d1d;
+  --secondary-color: #cf2c2c;
   --tertiary-color:#5F021F;
-  --Accent-color:#8C001A;
-  --Neutral-color:#FFAB3F;
-  --Contrast-color:#F2771A;
+  --Accent-color:#f9f221;
+  --Neutral-color:#d4d4d4;
+  --Contrast-color:#A4161B;
 }
 
 
