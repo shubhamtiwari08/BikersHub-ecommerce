@@ -90,7 +90,8 @@
 
 @media screen and (max-width:1024px) {
     .filter-main-container{
-        height: 30rem;
+        height: 50rem;
+      
     }
 }
 
@@ -100,10 +101,8 @@
    .filter-main-container{
     margin-top: 3.3rem;
     position: absolute;
-    height: 28rem;
     background-color: white;
     z-index: 99;
-    overflow-y: auto;
     border-top-right-radius: 5px;
    }
 

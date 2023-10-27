@@ -60,4 +60,13 @@
 
 
   
+ @media screen and (max-width: 480px) {
+
+  
+.signup-card {
  
+  height: 30rem;
+    width: 23rem;
+}
+
+ }

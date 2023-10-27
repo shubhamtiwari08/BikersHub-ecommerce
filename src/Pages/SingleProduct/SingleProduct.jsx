@@ -4,6 +4,7 @@ import { ProductContext } from "../../Contexts/Category/ProductContext";
 import "./singleProduct.css";
 import { cartContext } from "../../Contexts/Cart/CartContext";
 import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
+import Footer from "../../Components/Footer/Footer";
 
 function SingleProduct() {
   const [toggle, setToggle] = useState(false);
@@ -30,6 +31,7 @@ function SingleProduct() {
   };
 
   return (
+    <>
     <div className="product-container-main">
       <div className="content-container">
         <div className="image-container">
@@ -90,6 +92,8 @@ function SingleProduct() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

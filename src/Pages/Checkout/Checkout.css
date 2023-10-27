@@ -18,10 +18,12 @@
 
 .order-summary-conatiner{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .order-summary{
-    width: 25rem;
+    width: 23rem;
     height: 30rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px ;
@@ -45,6 +47,7 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    align-items: start;
     justify-content: space-between;
 }
 
@@ -73,12 +76,16 @@
         top: 8rem;
     }
 
+    .order-summary-conatiner{
+        flex-direction: column;
+    }
+
     .address-container{
         justify-content: start;
     }
 
     .address-container button{
-        width: 100%;
+       margin-left: 4rem;
     }
 
     

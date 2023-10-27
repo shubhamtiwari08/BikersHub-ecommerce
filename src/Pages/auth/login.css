@@ -60,3 +60,21 @@
     color: var(--secondary-color);
     text-decoration: underline;
   }
+
+
+    
+ @media screen and (max-width: 480px) {
+
+  
+
+  .login-form{
+   
+    height: 30rem;
+      width: 23rem;
+  }
+
+  .login-form button {
+    margin-left: 1.5rem;
+  }
+  
+   }

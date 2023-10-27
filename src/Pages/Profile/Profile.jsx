@@ -7,7 +7,7 @@ import { orderContext } from "../../Contexts/OrderContext/OrderContext";
 import Footer from "../../Components/Footer/Footer";
 
 function Profile() {
-  const [profileToggle, setProfileToggle] = useState(false);
+  const [profileToggle, setProfileToggle] = useState(true);
   const { userData } = useContext(authContext);
   const { getAddress } = useContext(orderContext);
 
