@@ -14,6 +14,7 @@ import { FilterContext } from "../../Contexts/FilterContext/FilterContext";
 import Loading from "../../Components/Loading/Loading";
 import { cartContext } from "../../Contexts/Cart/CartContext";
 import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
+import Footer from "../../Components/Footer/Footer";
 
 function ProductPage() {
   const [filterToggle,setFilterToggle] = useState(true)
@@ -53,6 +54,7 @@ function ProductPage() {
   }, []);
 
   return (
+    <>
     <div className="product-page">
      <span className="filter-toggle-btn">
        <button className="addtocart-btn" onClick={handleFilters}>Filters</button>
@@ -70,6 +72,8 @@ function ProductPage() {
         )}
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

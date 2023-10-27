@@ -4,6 +4,7 @@ import { useState } from "react";
 import Address from "../../Components/Address/Address";
 import { authContext } from "../../Contexts/Auth/AuthContext";
 import { orderContext } from "../../Contexts/OrderContext/OrderContext";
+import Footer from "../../Components/Footer/Footer";
 
 function Profile() {
   const [profileToggle, setProfileToggle] = useState(false);
@@ -15,6 +16,7 @@ function Profile() {
   console.log(userData);
 
   return (
+    <>
     <div className="profile-main-container">
       <div className="profile-content-container">
         <div className="profile-btns">
@@ -51,6 +53,8 @@ function Profile() {
         )}
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

@@ -4,6 +4,7 @@ import { authContext } from "../../Contexts/Auth/AuthContext";
 import { useNavigate } from "react-router";
 import Toast from "../../Components/Toast/Toast";
 import { Link } from "react-router-dom";
+import Footer from "../../Components/Footer/Footer";
 
 function Login() {
   const { isLogged, userData, setUserData, logoutHandler, setIsLogged } =
@@ -65,6 +66,7 @@ function Login() {
   //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWI5NWYyMC04ZDgzLTQ0MzktOGI3ZC1lNGEzOGRlMjUxODkiLCJlbWFpbCI6ImFkYXJzaGJhbGlrYUBnbWFpbC5jb20ifQ.xnaHqWs8YqgBptGtuky3F0xtHJDfz-J8_Wglpu2vYtY
 
   return (
+    <>
     <div className="login-form-maincontainer">
       <div className="login-form">
         <h1>Login</h1>
@@ -96,6 +98,8 @@ function Login() {
         </form>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

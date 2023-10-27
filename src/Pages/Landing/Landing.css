@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    height: 100%;
     overflow-y: auto;
-    height: 80vh;
+    
 }
 
 .categories-container{
@@ -13,9 +14,8 @@
     align-items: center;
     flex-wrap: wrap;
     border-radius: 5px;
-    height: 38rem;
+    height: auto;
     gap: 1rem;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .category-box{
@@ -33,7 +33,7 @@
 }
 
 .categories-title{
-    position: sticky;
+    position: absolute;
     top: 0;
 }
 
@@ -53,6 +53,7 @@
     right: 0;
     line-height: 3rem;
     text-align: right;
+    margin-right: 8rem;
     
 }
 
@@ -70,14 +71,12 @@
     background-color: rgb(41, 188, 41);
 }
 
-.hero-bike-img{
-
-    
-}
+ 
 
 
 .hero-bike-img img{
     width: 65%;
+    margin-left: 10rem;
 }
 
 
@@ -90,6 +89,7 @@
     font-weight: bolder;
     cursor: pointer;
     padding: 0.5rem;
+    margin-top: 13rem;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
@@ -134,6 +134,12 @@
         position: sticky;
         top: 0;
     }
+
+    .hero-bike-img img{
+        width: 100%;
+        margin-left: 0;
+    }
+    
     
     
     
@@ -145,10 +151,11 @@
         top: 0;
         font-size: 8px;
         line-height: 18px;
-        
+        margin: 0;
     }
 
     .Shop-now{
+        margin-top: 3rem;
         padding: 0.2rem;
         font-size: small;
     }

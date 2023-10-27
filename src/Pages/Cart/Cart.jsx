@@ -5,6 +5,7 @@ import CartDetails from "../../Components/cartdetail/CartDetails";
 import { cartContext } from "../../Contexts/Cart/CartContext";
 import Loading from "../../Components/Loading/Loading";
 import { authContext } from "../../Contexts/Auth/AuthContext";
+import Footer from "../../Components/Footer/Footer";
 
 function Cart() {
   const { cartState, cartDispatch } = useContext(cartContext);
@@ -15,6 +16,7 @@ function Cart() {
   console.log(finalCart);
 
   return (
+    <>
     <div>
       {finalCart.length > 0 ? (
         <div className="cart-main-container">
@@ -35,6 +37,8 @@ function Cart() {
         </div>
       )}
     </div>
+    <Footer/>
+    </>
   );
 }
 

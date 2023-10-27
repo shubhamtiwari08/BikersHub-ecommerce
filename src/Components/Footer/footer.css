@@ -1,0 +1,16 @@
+footer{
+    background-color: var(--Contrast-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: larger;
+}
+
+footer ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}

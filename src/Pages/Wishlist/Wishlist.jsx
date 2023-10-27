@@ -4,6 +4,7 @@ import "./wishlist.css";
 import { wishlistContext } from "../../Contexts/Wishlist/WishlistContext";
 import WishlistCard from "../../Components/wishlistCard/WishlistCard";
 import Loading from "../../Components/Loading/Loading";
+import Footer from "../../Components/Footer/Footer";
 
 function Wishlist() {
   const { wishlistState } = useContext(wishlistContext);
@@ -13,6 +14,7 @@ function Wishlist() {
   console.log(finalWishlist);
 
   return (
+    <>
     <div className="wishlist-body">
       <h1>wishlist</h1>
       <div className="wishlist-box">
@@ -30,6 +32,8 @@ function Wishlist() {
         )}
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

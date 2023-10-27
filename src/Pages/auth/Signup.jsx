@@ -3,6 +3,7 @@ import "./signup.css";
 import { useNavigate } from "react-router";
 import Toast from "../../Components/Toast/Toast";
 import { Link } from "react-router-dom";
+import Footer from "../../Components/Footer/Footer";
 
 function Signup() {
   const defaultData = {
@@ -57,6 +58,7 @@ function Signup() {
   };
 
   return (
+    <>
     <div className="signup-body">
       <div className="signup-card">
         <h1>Sign Up</h1>
@@ -98,6 +100,8 @@ function Signup() {
         </p>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 
